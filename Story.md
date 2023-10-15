@@ -98,6 +98,29 @@ Players can discover logs detailing GloomTech's experiments and their connection
 
 Hints of GloomTech's presence in the form of logos, hidden messages in ship's AI, and rare communications intercepts.
 
+## Gloomy - The Bioluminescent Mushroom
+
+### Physical Appearance:
+- **Design**: A vibrant mushroom with a radiant cap emitting a soft ambient glow. Its stem is sleek with a pattern sometimes mimicking the GloomTech logo.
+- **Colors**: Primarily neon blue with shades of violet and pink, giving it an otherworldly charm.
+
+### Role in the World:
+- Ambient Lighting
+- Natural Air Purifier
+- Surveillance Device
+
+### Gameplay Integration:
+- Collectibles
+- Puzzles
+- GloomNet Integration
+- Eavesdropping
+- Easter Eggs
+
+### In-Game Ads and Promotion:
+- Ads
+- Podcasts
+- Meme Culture
+
 ## Justification for Trials:
 - The Captain conducts trials to identify the mole.
 - Trials offer rewards like safe cabins, access to new areas, and supplies.
