@@ -143,6 +143,23 @@ The game ends with a lifeboat explosion, hinting at the commencement of "Stage 2
 - **Battery Life:** The GloomBand requires charging. While it has a long battery life, players will need to find charging stations around the ship. This adds another layer of resource management.
 - **GloomTech Labs Integration:** Upon discovering hidden GloomTech labs, players can upgrade their GloomBand, unlocking new features or enhancing existing ones.
 
+### GloomTech Ads and Podcasts Integration into GloomNet:
+
+#### 1. **GloomNet Ad Overrides**:
+    - When players access GloomNet on their GloomBand, an "ad" starts playing. These are primarily GloomTech's PR advertisements, showcasing their "benevolent" interventions in the post-apocalyptic world.
+    - Example: A picturesque ad with soft music, showcasing GloomTech's geothermal plants and how they're "powering the future."
+    
+#### 2. **Undernet Podcasts Takeover**:
+    - Occasionally, instead of the expected GloomTech ad, the Underground Podcast starts playing. It begins to roast or expose GloomTech's actions, with witty commentary and potentially hints about the game.
+    - However, after a few moments into the podcast, it gets abruptly interrupted and replaced with a grayed-out box stating "AD Removed." There could even be a little "Gloomy" mascot beside it looking worried or putting on a 'shush' gesture.
+    
+#### 3. **Interactive Ad Banners**:
+    - While browsing GloomNet, players might see banner ads promoting GloomTech products or services. Some can be interacted with, leading to mini-games, Easter eggs, or additional lore.
+    - Example: An ad promoting "GloomTech's Evolution Enhancer," which when clicked, leads to a brief animation of a stick figure transforming into a buff version but then deflating comically.
+    
+#### 4. **User Comments**:
+    - Underneath some of these ads or videos, you can have a comments section that appears to be from other GloomNet users. Some of the comments could be genuine, while others could be blatantly scripted praises for GloomTech. Occasionally, a dissenting comment might be present but is quickly "removed for violating community guidelines."
+
 # GhastMarina: Cast of Characters
 
 ## The Captain "Antagonist"
