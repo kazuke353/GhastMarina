@@ -1,1 +1,3 @@
 
+
+The character is depicted with fiery red layered hair that suggests both wildness and grace, brushing just past his ears. His face has a defined jawline, elevated cheekbones, straight narrow nose, and slender arching eyebrows. The eyes, striking in nature, are adorned with slim, matte black rectangular glasses. He wears a black choker with a central silver pendant, complemented by assorted silver chain necklaces, a white shirt tucked and secured by a dark belt creating a draped effect, a fitted black jacket with textured fabric and white fur, glossy black pants with distinct silver chains, and dark leather boots with silver buckles if visible. The overall aura is a mix of rebellion, elegance, confidence, and intrigue.
