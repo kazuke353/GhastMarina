@@ -13,14 +13,25 @@ His fiery red hair, wild yet refined, cascades just past his ears, creating an a
 
 ## Backstory
 
-Noah's academic pursuits in psychology gravitated towards understanding the enigma of criminal minds. His groundbreaking thesis on the intricacies of manipulators and sociopaths intrigued the elusive Undernet elites. Noah's strategic insights combined with this deep psychological understanding made him an ideal operative for The Captain.
+Noah was a prodigy in the world of psychology, forever captivated by the labyrinthine corridors of the human mind. Growing up as an unusually observant child, he had a gift for understanding the nuances that most people missed. This led him to study psychology, particularly the dark, complex layers of criminal masterminds and manipulators.
+
+During his university years, he was surrounded by intellectual challenges, but none more than his relationship with Lila, a fellow psychology major with a focus on rehabilitation. Their debates were epic battles, pitting Lila's faith in humanity's goodness against Noah's growing skepticism in its darker tendencies.
+
+Noah's beliefs took a darker turn when a cataclysmic event plunged the world into chaos, and when Lila was tragically ensnared in a crime orchestrated by one of the subjects of Noah's research. This was the ultimate test of his theories, and it shattered any remaining vestiges of his faith in the inherent goodness of mankind. When The Captain approached him post-cataclysm with a tantalizing offer to prove his theories on a grand stage, Noah seized the opportunity.
 
 ## Motive
 
-Pre-cataclysm, Noah's aspirations were noble: understanding the malignant psyche to rehabilitate and transform. But as societal pillars crumbled, revealing humanity's unchecked darkness, his perspective shifted. He witnessed a disturbing pattern; the very chaos of the world seemed to draw out humanity's latent malevolence, making it evident.
+Originally, Noah sought to deter and prevent criminal behavior through understanding. However, his focus dramatically shifted after the cataclysm and the tragic events surrounding Lila. His aim now is to reveal the raw, unfiltered nature of humanity when stripped of societal norms and regulations. The Deck Trials serve as his living laboratory, where he examines whether individuals will embrace their darker side when pushed to their limits.
 
-His trust in the inherent goodness of humanity waned. Instead, he theorized that these so-called 'deviant behaviors' were not anomalies but the unveiled truth of human nature, suppressed by societal constraints. 
+At the core of Noah's interactions lies a paradox—his skepticism about human nature is tinged with a bittersweet nostalgia for the hope he once held, largely due to his past with Lila. His persona oscillates between playful mischief and profound insights, embodying the lovable yet deeply unsettling characteristics of his inspirations—Kokichi, Nagito, and Katagiri Yuuichi.
+Character Relationships
 
-Enter The Captain with a proposition: a platform for Noah to test his hypothesis. The challenge? Manipulate survivors into discord under a masquerade of a game. If they succumb to mistrust and deceit, it would affirm Noah's belief in humanity's concealed malevolence.
+- **Lila:** Noah's former lover and intellectual sparring partner. Her tragic fate serves as a relentless haunting of his consciousness, leading him further into his inquiries about the dark side of humanity.
+- **The Captain:** A mysterious authority figure who provides Noah with the perfect experimental setting, the Deck Trials. Noah is grateful but ever cautious, always questioning The Captain's true intentions.
+- **Aria:** A survivor who reminds him eerily of Lila, both in her appearance and her staunch belief in humanity's goodness. Their interactions are a complex ballet of curiosity and mutual distrust, a series of emotional and intellectual challenges that neither can resist.
 
-For Noah, this wasn't just a game. It was a grand sociological experiment. As "The Enigma", he doesn't act merely for theatrics but to scrutinize his theory. His unpredictability keeps everyone guessing, but his core motive remains—to unveil the inherent shadows within humanity.
+Noah is an enigma, a charming manipulator, and a tragic idealist, all rolled into one. He's a character you'd want to unravel but never fully will—making him both unforgettable and lovable in a dark, complex way.
+Personality Traits
+- **Manipulative yet Insightful:** Noah's words and actions are calculated, designed to probe the people around him. However, he often dispenses wisdom that challenges conventional thinking, endearing him to those who see the world in shades of gray.
+- **Unsettling yet Charismatic:** Noah possesses a charisma that draws people in, but his nihilistic views and questionable actions make him a figure of both fascination and caution.
+- **Cynical yet Hopeful:** Deep down, buried beneath layers of skepticism, lies a fragment of hope. It's this internal conflict that adds a compelling layer of complexity to his character.
