@@ -29,7 +29,7 @@ A group of individuals wake up on a futuristic cruise ship teeming with mutated 
 - **Maritime Combat:** Combat against zombies using ship-based weaponry.
 - **Navigational Puzzles:** Solve puzzles to access different ship areas.
 - **Resource Management:** Manage scarcity of food, medicine, and ammunition.
-- **Deck Trials:** Discussions to identify the mole. Losers face zombie-filled "Isolation Zones".
+- **Deck Trials:** Discussions to identify the mole. The chosen person is tranqualized by their band and forced to face an zombie-filled "Isolation Zone".
 - **Skill Tree:** Upgrade skills based on choices and gameplay performance.
 - **Narrative Twists:** 
     - Blackout moments where time skips and Noah sabotages the castyou.
