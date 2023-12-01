@@ -6,6 +6,23 @@ Action RPG / Visual Novel
 ## Core Concept:
 A group of individuals wake up on a futuristic cruise ship teeming with mutated zombies. Their grim journey and fates are broadcasted live on the dark web, with the player unknowingly playing the role of a mole, sabotaging the group's efforts.
 
+### Opening Scene:
+
+- **Black Screen with Helicopter Sounds:** The game opens with a black screen, and players are immediately greeted with the sound of helicopters overhead. This auditory element creates a sense of urgency and confusion, suggesting a covert operation or transportation.
+- **Mechanism and Falling Sound:** Following the helicopter sounds, players hear the workings of a mechanism, perhaps implying a large cargo being moved. The subsequent sound of something falling heavily hints at the shipping container (where the characters find themselves) being loaded onto the ship.
+- **Thump of the Shipping Container:** The sequence concludes with a sudden, jarring thump as the shipping container lands aboard the ship. This sound serves as the pivotal moment that transitions the players into the game's reality, finding themselves trapped in the container.
+
+### Impact on Player Experience:
+
+- **Building Suspense:** This auditory-led introduction builds suspense and curiosity before any visuals appear, engaging players' imaginations and drawing them into the game's world.
+- **Setting the Atmosphere:** The soundscape sets a mysterious and foreboding atmosphere, suggesting that the characters are part of a plan they have no control over.
+- **Creating Immersion:** The use of sound instead of immediate visuals allows for a more immersive experience, as players are left to wonder about their surroundings and the situation they are in.
+
+### Transition to Visuals:
+
+- **Emergence from Darkness:** As the game transitions from the black screen to the first visuals, players find themselves in the role of the main character, awakening inside the shipping container, disoriented and with no memory of how they got there.
+- **First Interaction:** The game could then allow players to interact with their environment, further investigating the sounds they heard and discovering that they are indeed on a ship.
+
 ## Narrative Elements:
 
 ### Backstory:
