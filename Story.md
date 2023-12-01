@@ -29,7 +29,7 @@ A group of individuals wake up on a futuristic cruise ship teeming with mutated 
 - **Maritime Combat:** Combat against zombies using ship-based weaponry.
 - **Navigational Puzzles:** Solve puzzles to access different ship areas.
 - **Resource Management:** Manage scarcity of food, medicine, and ammunition.
-- **Deck Trials:** Discussions to identify the mole. The chosen person is tranqualized by their band and forced to face an zombie-filled "Isolation Zone".
+- **Deck Trials:** Discussions to identify the mole. The chosen person is tranqualized by their band and forced to face an zombie-filled "Isolation Zone" meeting their demise.
 - **Skill Tree:** Upgrade skills based on choices and gameplay performance.
 - **Narrative Twists:** 
     - Blackout moments where time skips and Noah sabotages the castyou.
@@ -54,6 +54,36 @@ A group of individuals wake up on a futuristic cruise ship teeming with mutated 
 #### Symbolic Aspect:
 
 The beam can also be interpreted as a metaphor for false hope or malevolent intent. It serves as an alluring beacon that draws survivors, only to ensnare them in "The Captain's" dark web of twisted games and betrayal.
+
+### Deck Trials:
+
+Deck trials are held every Sunday for a maximum of 7 Trials in the game resulting of 7 characters being cast off.
+
+**Deck Trials - Setting and Dynamics:**
+- **Location:** Trials occur in a circular, tense setting like the ship's ball room, fostering an atmosphere of suspicion.
+- **Visuals and Ambiance:** Characters face each other in a circle, with stark lighting and minimal background noise, punctuated by the ship's sounds and distant zombie noises, enhancing the suspense.
+
+**Character Participation:**
+- **Role in Trials:** Every character, including the player, can be both an accuser and accused, creating a dynamic of uncertainty and distrust.
+- **Emotional Display:** Characters show a wide range of emotions through detailed animations, reflecting anxiety, anger, or fear.
+
+**Gameplay Mechanics:**
+- **Decision-Making:** Players engage in rapid decision-making as accusations are made, supporting, questioning, or contradicting others.
+- **Dynamic Interaction:** The gameplay features fast-paced dialogue with characters reacting in real-time, offering an interactive and evolving discussion.
+
+**Player's Role:**
+- **Strategic Choices:** Players strategically decide when and how to intervene, using evidence and observations to influence the trial's outcome.
+- **Observation Skills:** Paying attention to dialogue, body language, and character history is crucial for making informed decisions.
+
+**Narrative Impact:**
+- **Emotional and Relational Dynamics:** The trials are charged with emotional conflict, influencing character relationships and alliances.
+- **Consequential Outcomes:** The group's decision at the trial's end affects trust, alliances, and the game's story progression.
+
+**Variability and Replayability:**
+- **Changing Scenarios:** Each trial is unique, influenced by previous player choices and character survival.
+- **Long-Term Narrative Effects:** Decisions in one trial have lasting effects on future trials and relationships.
+
+This scenario envisions the Deck Trials as a central, dynamic aspect of the game, where suspicion and shifting alliances play a key role in player engagement and narrative development.
 
 ## Mutated Zombie Monsters:
 
@@ -182,62 +212,3 @@ The game ends with a lifeboat explosion, hinting at the commencement of "Stage 2
     
 #### 4. **User Comments**:
     - Underneath some of these ads or videos, you can have a comments section that appears to be from other GloomNet users. Some of the comments could be genuine, while others could be blatantly scripted praises for GloomTech. Occasionally, a dissenting comment might be present but is quickly "removed for violating community guidelines."
-
-# GhastMarina: Cast of Characters
-
-## The Captain "Antagonist"
-- **Personality:** Sadistic, cunning, and highly intelligent. Enjoys watching the chaos unfold. Reminiscent of characters like Monokuma, Junko Enoshima, and Handsome Jack.
-- **Backstory:** Once a high-ranking officer, he became disillusioned with the world post-cataclysm. Seeking power and control, he found a niche in the Undernet's darkest corners, orchestrating the ghastly game aboard the ship.
-
-## 1. Noah "The Enigma" [M]
-- **Role:** Main Character
-- **Traits:** Observant, manipulative, and unpredictable.
-- **Description:** Noah might come off as unassuming, but his background tells another story. Formerly a psychology student with an affinity for understanding criminal minds, he now serves The Captain. Tasked with sabotage, Noah's psychological expertise allows him to read and manipulate the group, making every Deck Trial a layered mind game. His actions are often unpredictable, reminiscent of Kokichi or Nagito from Danganronpa. Underneath his friendly demeanor lies a mastermind, playing both sides for his ultimate goal.
-- **Backstory:** Previously a psychology student, Noah had a budding interest in criminal minds. His thesis, which delved deep into the psyche of manipulators and sociopaths, caught the attention of the Undernet elites. This knowledge, paired with his strategic thinking, made him the perfect mole for The Captain.
-[Link](https://chat.openai.com/c/5bc1ac0e-75a5-4ca9-9934-0c2bd5cc8fec)
-
-## 2. Dr. Elise "The Medic" [F]
-- **Traits:** Compassionate, decisive, and meticulous.
-- **Backstory:** Elise was a top surgeon, dedicating her life to medical research. When the cataclysm hit, she used her expertise to develop treatments for radiation sickness and other post-apocalyptic ailments.
-- **Secret-Backstory:** A former GloomTech scientist who tried to sabotage the mutation serum, leading to her ending up on the ship.
-- **Role:** She can provide crucial lore, hints, and unique quests related to GloomTech's involvement.
-
-## 3. Leo "The Gambler" [M]
-- **Traits:** Suave, risk-taking, and silver-tongued.
-- **Backstory:** A professional poker player before the cataclysm, Leo used his skills to manipulate post-apocalyptic underground gambling rings. His life was a constant high-stakes game, making him adaptable and resourceful.
-
-## 4. Aria "The Hacker" [F]
-- **Traits:** Curious, introverted, and tenacious.
-- **Backstory:** A child prodigy, Aria was a renowned white-hat hacker pre-cataclysm. Post-apocalypse, her skills became invaluable, hacking into remnants of the old world's technology to help communities survive.
-
-## 5. Dexter "The Soldier" [M]
-- **Traits:** Disciplined, loyal, and assertive.
-- **Backstory:** Dexter served multiple tours overseas before the world's end. Trained to handle extreme situations, he became a beacon of hope for survivors, leading rescue missions and establishing safe zones.
-
-## 6. Fiona "The Strategist" [F]
-- **Traits:** Analytical, patient, and introverted.
-- **Backstory:** Once a world chess champion, Fiona's strategic mind was her greatest asset. After society's collapse, she applied her skills to resource management and community planning.
-
-## 7. Grant "The Negotiator" [M]
-- **Traits:** Empathetic, persuasive, and calm.
-- **Backstory:** Grant's skills saved countless lives during hostage situations pre-cataclysm. Post-apocalypse, he negotiated between warring factions, ensuring peace and resource sharing.
-
-## 8. Hana "The Scout" [F]
-- **Traits:** Agile, observant, and optimistic.
-- **Backstory:** Hana's Olympic dreams were cut short by the cataclysm. Using her athletic prowess, she became a scout for survivor groups, navigating dangerous terrains and finding safe paths.
-
-## 9. Isaac "The Engineer" [M]
-- **Traits:** Innovative, pragmatic, and focused.
-- **Backstory:** Isaac was an aerospace engineer, working on cutting-edge technology. After the cataclysm, he repurposed old-world tech to serve the needs of the new world, such as creating water purifiers and energy sources.
-
-## 10. Jade "The Lockpick" [F]
-- **Traits:** Stealthy, witty, and resourceful.
-- **Backstory:** Jade, once a renowned art thief, used her skills post-apocalypse to retrieve essential supplies from locked or trapped areas, making her an asset to any group.
-
-## 11. Kai "The Survivalist" [M]
-- **Traits:** Resilient, pragmatic, and adaptive.
-- **Backstory:** Kai was a wilderness guide, teaching people survival skills in the wild. These skills became vital post-cataclysm, teaching communities how to live off the land.
-
-## 12. Luna "The Mystic" [F]
-- **Traits:** Intuitive, mysterious, and wise.
-- **Backstory:** Luna was a folklore professor, researching ancient rituals and myths. Post-apocalypse, her knowledge of the old world's mysteries made her a beacon for those seeking understanding in a changed world.
