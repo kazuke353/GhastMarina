@@ -4,12 +4,12 @@
 Action RPG / Visual Novel
 
 ## Core Concept:
-A group of individuals wake up on a futuristic cruise ship teeming with mutated zombies. Their grim journey and fates are broadcasted live on the dark web, with the player unknowingly playing the role of a mole, sabotaging the group's efforts.
+A group of individuals wake up on a futuristic interconnected vessels teeming with mutated zombies. Their grim journey and fates are broadcasted live on the dark web, with the player unknowingly playing the role of a mole, sabotaging the group's efforts.
 
 ### Opening Scene:
 
 - **Black Screen with Helicopter Sounds:** The game opens with a black screen, and players are immediately greeted with the sound of helicopters overhead. This auditory element creates a sense of urgency and confusion, suggesting a covert operation or transportation.
-- **Mechanism and Falling Sound:** Following the helicopter sounds, players hear the workings of a mechanism, perhaps implying a large cargo being moved. The subsequent sound of something falling heavily hints at the shipping container (where the characters find themselves) being loaded onto the ship.
+- **Mechanism and Falling Sound:** Following the helicopter sounds, players hear the workings of a mechanism, perhaps implying a large cargo being moved. The subsequent sound of something falling heavily hints at the shipping container (where the characters find themselves) being loaded onto one of the vessels.
 - **Thump of the Shipping Container:** The sequence concludes with a sudden, jarring thump as the shipping container lands aboard the ship. This sound serves as the pivotal moment that transitions the players into the game's reality, finding themselves trapped in the container.
 
 ### Impact on Player Experience:
@@ -32,6 +32,47 @@ A group of individuals wake up on a futuristic cruise ship teeming with mutated 
 - The ship is technologically advanced, sailing through a frozen sea under an ash-darkened sky.
 - The ship, powered by a unique energy engine, emits a brilliant ray into the sky, surrounded by spectacular lightning, serving as a beacon in the eternal night.
 - **Additional Info:** [Link](https://chat.openai.com/c/3452c567-c0b7-4332-bc38-727815b32049)
+
+### Vessel Themes and Settings:
+
+1. **The Forgotten City Vessel**:
+   - **Theme**: An overgrown urban landscape, resembling a city lost in time.
+   - **Environment**: Skyscraper-like structures, abandoned vehicles, and streets overrun with vegetation.
+   - **Zombies**: Urban-themed mutants, like former city dwellers, police, and animals, adapted to an urban environment.
+
+2. **The Industrial Complex Vessel**:
+   - **Theme**: A maze of factories and warehouses, with a heavy industrial atmosphere.
+   - **Environment**: Machinery, conveyor belts, and factory lines, some still operational and dangerous.
+   - **Zombies**: Mutants resembling workers, with enhanced strength and resistance, resembling machinery parts or wearing decayed hazmat suits.
+
+3. **The Subterranean Lab Vessel**:
+   - **Theme**: A high-tech underground research facility.
+   - **Environment**: Laboratories, containment cells, and high-tech security systems.
+   - **Zombies**: Experimental subjects, some with advanced mutations like invisibility or enhanced intelligence.
+
+4. **The Aquatic Habitat Vessel**:
+   - **Theme**: A vessel mimicking an underwater world.
+   - **Environment**: Flooded areas, aquariums, and water-themed decor.
+   - **Zombies**: Aquatic mutants with adaptations like gills or webbed limbs, able to move swiftly in water.
+
+5. **The Agricultural Biosphere Vessel**:
+   - **Theme**: A vessel dedicated to food production, resembling a giant greenhouse.
+   - **Environment**: Overgrown plant life, farmlands, and irrigation systems.
+   - **Zombies**: Plant-infused mutants, camouflaged, and using vegetation for attacks.
+
+6. **The Cryo-Preservation Vessel**:
+   - **Theme**: A cold, icy environment used for long-term storage and cryo-research.
+   - **Environment**: Icy corridors, frozen chambers, and malfunctioning climate controls.
+   - **Zombies**: Cryogenically mutated creatures, adapted to cold, possibly slow but extremely resilient.
+
+### Gameplay Mechanics:
+
+- **Varied Combat Strategies**: Players must adapt their combat style for each vessel's unique zombie types and environmental hazards.
+- **Resource Scavenging and Crafting**: Different vessels offer distinct resources, requiring players to scavenge and craft suitable gear and tools.
+- **Environmental Puzzles**: Each vessel has its own set of puzzles, tied to its theme and requiring specific approaches to solve.
+- **Story Integration**: Uncover how each vessel came to be, its purpose pre-cataclysm, and how it fell into desolation.
+- **Survivor Stories**: Find logs or remnants of the people who once lived on these vessels, providing lore and possibly hinting at GloomTech's involvement.
+- **Boss Battles**: Introduce unique boss mutants in each vessel, embodying the vessel's theme and requiring specific tactics to defeat.
 
 ### Characters:
 - 12 diverse individuals, each with unique skills.
