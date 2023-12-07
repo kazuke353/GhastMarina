@@ -74,6 +74,16 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
 - **Survivor Stories**: Find logs or remnants of the people who once lived on these vessels, providing lore and possibly hinting at GloomTech's involvement.
 - **Boss Battles**: Introduce unique boss mutants in each vessel, embodying the vessel's theme and requiring specific tactics to defeat.
 
+- **Sanity Mechanic:**
+   - **Implementation:** The sanity of each character could be affected by various factors such as witnessing traumatic events, encountering mutated zombies, or making morally challenging decisions.
+   - **Gameplay Impact:** A character's sanity level could affect their dialogue options, decision-making abilities, and combat effectiveness. For example, a character with low sanity might see hallucinations, leading to misjudging situations or making erratic choices.
+   - **Player Interaction:** Players could have the option to help characters maintain or regain their sanity through specific actions, dialogue choices, or by using certain items.
+
+- **Secret Objectives for Each Character:**
+   - **Personal Goals:** Each character could have hidden objectives based on their backstory or motivations. For example, Dr. Elise might secretly be trying to find a cure for the mutated zombie virus, or Leo, "The Gambler," might be looking for a way to exploit the ship's systems for personal gain.
+   - **Dynamic Narrative:** These secret objectives could lead to unexpected plot twists, such as betrayals or surprising alliances. Players would need to be observant and adaptive, as these objectives might conflict with the group's overall goals.
+   - **Integration with Deck Trials:** The secret objectives could play a significant role in the Deck Trials, where characters might use the trials to further their hidden agendas.
+
 ### Characters:
 - 12 diverse individuals, each with unique skills.
 - Character backstories and personal quests are unlocked as the game progresses.
