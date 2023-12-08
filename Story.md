@@ -21,7 +21,7 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
 ### Transition to Visuals:
 
 - **Emergence from Darkness:** As the game transitions from the black screen to the first visuals, players find themselves in the role of the main character, awakening inside the shipping container, disoriented and with no memory of how they got there.
-- **First Interaction:** The game could then allow players to interact with their environment, further investigating the sounds they heard and discovering that they are indeed on a ship.
+- **First Interaction:** The game could then allow players to interact with their environment, further investigating the sounds they heard and discovering that they are indeed on an advanced interconnected vessels.
 
 ## Narrative Elements:
 
@@ -29,8 +29,8 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
 - Participants wake up in a shipping container, with no memory of how they got there.
 - Their last known memory is of a DarkWeb invitation they couldn't resist.
 - They are part of a twisted online game orchestrated by "The Captain".
-- The ship is technologically advanced, sailing through a frozen sea under an ash-darkened sky.
-- The ship, powered by a unique energy engine, emits a brilliant ray into the sky, surrounded by spectacular lightning, serving as a beacon in the eternal night.
+- The vessels are technologically advanced, sailing through a frozen sea under an ash-darkened sky.
+- The center vessel, powered by a unique energy engine, emits a brilliant ray into the sky, surrounded by spectacular lightning, serving as a beacon in the eternal night.
 - **Additional Info:** [Link](https://chat.openai.com/c/3452c567-c0b7-4332-bc38-727815b32049)
 
 ### Vessel Themes and Settings:
