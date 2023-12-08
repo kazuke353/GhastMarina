@@ -10,7 +10,7 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
 
 - **Black Screen with Helicopter Sounds:** The game opens with a black screen, and players are immediately greeted with the sound of helicopters overhead. This auditory element creates a sense of urgency and confusion, suggesting a covert operation or transportation.
 - **Mechanism and Falling Sound:** Following the helicopter sounds, players hear the workings of a mechanism, perhaps implying a large cargo being moved. The subsequent sound of something falling heavily hints at the shipping container (where the characters find themselves) being loaded onto one of the vessels.
-- **Thump of the Shipping Container:** The sequence concludes with a sudden, jarring thump as the shipping container lands aboard the ship. This sound serves as the pivotal moment that transitions the players into the game's reality, finding themselves trapped in the container.
+- **Thump of the Shipping Container:** The sequence concludes with a sudden, jarring thump as the shipping container lands aboard the center vessel. This sound serves as the pivotal moment that transitions the players into the game's reality, finding themselves trapped in the container.
 
 ### Impact on Player Experience:
 
@@ -80,7 +80,7 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
    - **Player Interaction:** Players could have the option to help characters maintain or regain their sanity through specific actions, dialogue choices, or by using certain items.
 
 - **Secret Objectives for Each Character:**
-   - **Personal Goals:** Each character could have hidden objectives based on their backstory or motivations. For example, Dr. Elise might secretly be trying to find a cure for the mutated zombie virus, or Leo, "The Gambler," might be looking for a way to exploit the ship's systems for personal gain.
+   - **Personal Goals:** Each character could have hidden objectives based on their backstory or motivations. For example, Dr. Elise might secretly be trying to find a cure for the mutated zombie virus, or Leo, "The Gambler," might be looking for an exploit for personal gain.
    - **Dynamic Narrative:** These secret objectives could lead to unexpected plot twists, such as betrayals or surprising alliances. Players would need to be observant and adaptive, as these objectives might conflict with the group's overall goals.
    - **Integration with Deck Trials:** The secret objectives could play a significant role in the Deck Trials, where characters might use the trials to further their hidden agendas.
 
@@ -94,8 +94,7 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
 
 ## Gameplay Mechanics:
 
-- **Maritime Combat:** Combat against zombies using ship-based weaponry.
-- **Navigational Puzzles:** Solve puzzles to access different ship areas.
+- **Navigational Puzzles:** Solve puzzles to access different areas.
 - **Resource Management:** Manage scarcity of food, medicine, and ammunition.
 - **Deck Trials:** Discussions to identify the mole. The chosen person is tranqualized by their band and forced to face an zombie-filled "Isolation Zone" meeting their demise.
 - **Skill Tree:** Upgrade skills based on choices and gameplay performance.
@@ -108,14 +107,14 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
 - **Atmosphere:** Supernatural darkness heightens tension and enables atmospheric lighting effects.
 - **Hazards:** Real-time combat against environmental threats like turbulent waters or fires.
 
-### Ship:
+### Center Vessel:
 
-- **Energy Engine Core:** The ship is powered by a special energy engine developed by GloomTech Industries, known as the "Polaris Core." The core is a miniature version of a technology initially designed to manipulate Earth's magnetic field for environmental recovery post-cataclysm.
+- **Energy Engine Core:** The vessels are powered by a special energy engine developed by GloomTech Industries, located in the center vessel, known as the "Polaris Core." The core is a miniature version of a technology initially designed to manipulate Earth's magnetic field for environmental recovery post-cataclysm.
   
 ### The Light Beam's Role:
 
 1. **Localization and Navigation:** The beam serves as a geolocation beacon, crucial for navigating the frozen seas in a world where traditional navigation systems are unreliable.
-2. **Data Transmission:** The beam transmits real-time data to a surviving GloomTech satellite, facilitating covert monitoring of events on the ship.
+2. **Data Transmission:** The beam transmits real-time data to a surviving GloomTech satellite, facilitating covert monitoring of events.
 3. **Energy Dissipation:** The beam acts as a controlled release mechanism for the engine's intense energy output, preventing overheating or a catastrophic meltdown.
 4. **Atmospheric Piercing:** The beam is so intense that it pierces the ash-darkened sky, providing a transient glimpse of clarity in a world shrouded in darkness.
 
@@ -128,8 +127,8 @@ The beam can also be interpreted as a metaphor for false hope or malevolent inte
 Deck trials are held every Sunday for a maximum of 7 Trials in the game resulting of 7 characters being cast off.
 
 **Deck Trials - Setting and Dynamics:**
-- **Location:** Trials occur in a circular, tense setting like the ship's ball room, fostering an atmosphere of suspicion.
-- **Visuals and Ambiance:** Characters face each other in a circle, with stark lighting and minimal background noise, punctuated by the ship's sounds and distant zombie noises, enhancing the suspense.
+- **Location:** Trials occur in a circular, tense setting like a ball room, fostering an atmosphere of suspicion.
+- **Visuals and Ambiance:** Characters face each other in a circle, with stark lighting and minimal background noise, punctuated by the vessel's sounds and distant zombie noises, enhancing the suspense.
 
 **Character Participation:**
 - **Role in Trials:** Every character, including the player, can be both an accuser and accused, creating a dynamic of uncertainty and distrust.
@@ -156,13 +155,13 @@ This scenario envisions the Deck Trials as a central, dynamic aspect of the game
 ## Mutated Zombie Monsters:
 
 ### Origin:
-- As part of "The Captain's" twisted game, a bio-engineered serum was introduced to the ship's crew. This serum was designed to mutate humans into monstrous creatures, creating a more formidable challenge for the participants.
+- As part of "The Captain's" twisted game, a bio-engineered serum was introduced to the vessels. This serum was designed to mutate humans into monstrous creatures, creating a more formidable challenge for the participants.
 - The transformation process is both rapid and agonizing, with victims losing all semblance of their humanity within hours.
-- The serum was initially tested on a subset of the crew, but due to its volatile nature, it quickly spread, turning the entirety of the ship's inhabitants into mutated zombies.
+- The serum was initially tested on a subset of the crew, but due to its volatile nature, it quickly spread, turning the entirety of the vessels inhabitants into mutated zombies.
 
 ### Characteristics:
 - **Physical Appearance:** These mutated zombies have grotesque features, with elongated limbs and sharp, protruding bones. Their skin is pale and mottled, with patches of decay and visible veins. Some possess aquatic adaptations, like gills or webbed fingers, hinting at experimental attempts to make them suitable for underwater combat.
-- **Senses:** Their senses are heightened. They have exceptional hearing and can detect even the slightest movement. Their eyes glow in the dark, allowing them to navigate the ship's darker sections with ease.
+- **Senses:** Their senses are heightened. They have exceptional hearing and can detect even the slightest movement. Their eyes glow in the dark, allowing them to navigate the vessels darker sections with ease.
 - **Abilities:** Some zombies have specialized abilities, such as spitting corrosive acid, or releasing paralyzing toxins upon contact. This diversity adds layers of strategy to combat encounters.
 
 ### Gameplay Implication:
@@ -178,7 +177,7 @@ GloomTech Industries is a shadowy multinational corporation specializing in adva
 
 #### Role in the Game
 
-- Secret sponsor behind "The Captain" and the ship.
+- Secret sponsor behind "The Captain" and the vessels.
 - Creator of the mutated zombie serum, which was initially marketed as a "next-gen evolution enhancer."
 - Holds a monopoly over geothermal energy and various other essential resources.
 
@@ -186,7 +185,7 @@ GloomTech Industries is a shadowy multinational corporation specializing in adva
 
 #### Hidden Rooms:
 
-Scattered throughout the ship, players can find hidden GloomTech labs, containing experimental weapons, serums, and puzzles.
+Scattered throughout the vessels, players can find hidden GloomTech labs, containing experimental weapons, serums, and puzzles.
 
 #### Log Files:
 
@@ -194,7 +193,7 @@ Players can discover logs detailing GloomTech's experiments and their connection
 
 #### Easter Eggs:
 
-Hints of GloomTech's presence in the form of logos, hidden messages in ship's AI, and rare communications intercepts.
+Hints of GloomTech's presence in the form of logos and rare communications intercepts.
 
 ## Gloomy - The Bioluminescent Mushroom
 
@@ -229,7 +228,6 @@ Hints of GloomTech's presence in the form of logos, hidden messages in ship's AI
 - **The Cataclysm:** Nuclear warfare and meteor impact result in volcanic eruptions, causing the sky to be covered in ash, leading to eternal night.
 - **Survival:** Humanity adapts by building underground cities and shifts to geothermal energy.
 - **The DarkWeb's Evolution:** The DarkWeb becomes the "Undernet", an exclusive network for the elite.
-- **The Ship's Legacy:** An old military ship retrofitted to sail on frozen seas.
 - **The Captain's Motive:** The Captain orchestrates the game to send a message about power and entertainment.
 
 ## Conclusion:
@@ -255,13 +253,12 @@ The game ends with a lifeboat explosion, hinting at the commencement of "Stage 2
 2. **VoyageLog:** A digital diary tracking the player's journey, decisions, and unlocked lore.
 3. **MissionTracker:** Active tasks, side missions, and challenges.
 4. **StatusHUD:** Displays the player's health, stamina, inventory, and other essential stats. This HUD minimizes when not in use and maximizes during combat or critical situations.
-5. **GloomNet:** A restricted browser app that gives players snippets of the world lore, GloomTech's history, and the ship's design. This can serve as a secondary method to discover the backstory.
+5. **GloomNet:** A restricted browser app that gives players snippets of the world lore, GloomTech's history. This can serve as a secondary method to discover the backstory.
 
 #### Gameplay Mechanics:
 - **Interactive Elements:** Players can interact with the wristband to accept/decline missions, check messages, and access GloomNet for additional information.
 - **Stealth Mode:** The wristband's glow can potentially attract mutated zombies. Players must manage the wristband's brightness or even turn it off during stealth missions.
-- **Hacking Mini-Games:** Using the wristband, players can hack into ship systems or access hidden GloomTech logs. These mini-games can involve puzzles or timed challenges.
-- **Battery Life:** The GloomBand requires charging. While it has a long battery life, players will need to find charging stations around the ship. This adds another layer of resource management.
+- **Hacking Mini-Games:** Using the wristband, players can hack into systems or access hidden GloomTech logs. These mini-games can involve puzzles or timed challenges.
 - **GloomTech Labs Integration:** Upon discovering hidden GloomTech labs, players can upgrade their GloomBand, unlocking new features or enhancing existing ones.
 
 ### GloomTech Ads and Podcasts Integration into GloomNet:
