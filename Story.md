@@ -3,6 +3,9 @@
 ## Genre:
 Action RPG / Visual Novel
 
+## Inspiration:
+Danganronpa Series, Adventure Time, Gravity Falls, Resident Evil, Borderlands
+
 ## Core Concept:
 A group of individuals wake up on a futuristic interconnected vessels teeming with mutated zombies. Their grim journey and fates are broadcasted live on the dark web, with the player unknowingly playing the role of a mole, sabotaging the group's efforts.
 
@@ -28,6 +31,7 @@ A group of individuals wake up on a futuristic interconnected vessels teeming wi
 ### Backstory:
 - Participants wake up in a shipping container, with no memory of how they got there.
 - Their last known memory is of a DarkWeb invitation they couldn't resist.
+- That invitation was a promised freedom if they survive. They are criminal deat hrow inmates
 - They are part of a twisted online game orchestrated by "The Captain".
 - The vessels are technologically advanced, sailing through a frozen sea under an ash-darkened sky.
 - The center vessel, powered by a unique energy engine, emits a brilliant ray into the sky, surrounded by spectacular lightning, serving as a beacon in the eternal night.
