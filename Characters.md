@@ -2,8 +2,8 @@
 
 ## 1. Noah "The Enigma" [M]
 - **Role:** Main Character
-- **Traits:** Observant, manipulative, and unpredictable.
-- **Description:** Noah might come off as unassuming, but his background tells another story. Formerly a psychology student with an affinity for understanding criminal minds, he now serves The Captain. Tasked with sabotage, Noah's psychological expertise allows him to read and manipulate the group, making every Deck Trial a layered mind game. His actions are often unpredictable, reminiscent of Kokichi or Nagito from Danganronpa. Underneath his friendly demeanor lies a mastermind, playing both sides for his ultimate goal.
+- **Traits:** Observant, resiliant, highly adaptable, inquisitive, manipulative, and unpredictable.
+- **Description:** Noah might come off as unassuming, but his background tells another story. Formerly a psychology student with an affinity for understanding criminal minds, he now serves The Captain. Tasked with sabotage, Noah's psychological expertise allows him to read and manipulate the group, making every Deck Trial a layered mind game. His actions are often unpredictable, reminiscent of Kokichi or Nagito from Danganronpa. Underneath his friendly demeanor lies a mastermind, playing both sides for his ultimate goal. Given the ever-changing and upredictable enviroment of the game, Noah is able to quickly adjust to new challenges and scenarios, which is crucial for survival and strategizing in the game's setting. Has the ability to cope with and recover from setbacks and traumatic events, a quality essential for survival in the game's dark setting.
 - **Backstory:** Previously a psychology student, Noah had a budding interest in criminal minds. His thesis, which delved deep into the psyche of manipulators and sociopaths, caught the attention of the Undernet elites. This knowledge, paired with his strategic thinking, made him the perfect mole for The Captain.
 
 
