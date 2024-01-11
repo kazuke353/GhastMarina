@@ -1,4 +1,60 @@
-# GhastMarina: Voyage of the Betrayed
+# GhastMarina
+
+**Humanized Version of "GhastMarina: Voyage of the Betrayed"**
+
+---
+
+**What's the Game About?**
+
+Imagine waking up in a world where everything's gone haywire. That's "GhastMarina: Voyage of the Betrayed" for you. It's a mix of an action RPG and a visual novel that throws you into a bizarre universe, a blend of the quirky charm of "Adventure Time," the mystery of "Gravity Falls," and the dark twists of "Danganronpa" and "Resident Evil."
+
+**The Twist:**
+
+You're stuck on a ship with others, but here's the catch: you're all pawns in a dark web broadcast. Think reality TV meets zombie apocalypse, with a sprinkle of betrayal. Oh, and you're the double agent, but you don't even know it!
+
+**First Impressions:**
+
+The game doesn't just throw visuals at you. It starts with sounds—a helicopter, something heavy falling, and then a thud. You're left guessing, your heart racing. When the visuals kick in, you find yourself in a shipping container on a high-tech ship. It's eerie, it's mysterious, and you're scrambling to figure out what's going on.
+
+**The World You're In:**
+
+It's like stepping into different worlds, each with its own flavor of danger and decay. There are six vessels, each themed differently—from an overgrown cityscape to an underwater world, each infested with its own brand of mutated zombies. 
+
+**What's the Catch?**
+
+Survival is key, but it's not just about fighting off zombies. You need to be smart, scavenge for resources, and solve puzzles that make your brain tick. Your choices matter, and they shape your journey and the fate of others.
+
+**The Characters:**
+
+You're not alone in this. There are 12 unique individuals, each with their own story, skills, and secrets. And then there's "The Captain"—the mysterious figure pulling the strings.
+
+**The Core of the Game:**
+
+Deck Trials—think of them as intense discussions where you have to identify the mole among you. It's about strategy, quick thinking, and reading people. Get it wrong, and someone's getting thrown into a zombie pit.
+
+**The Threat:**
+
+Mutated zombies—terrifying creatures born from a twisted experiment. Each one's different, and you'll need to adapt your strategy to survive.
+
+**The Big Bad Corporation:**
+
+GloomTech Industries—these guys are everywhere, from the technology you use to the zombies you fight. They're a key part of the story, and their hidden labs and logs reveal bits and pieces of the larger puzzle.
+
+**The Quirky Side:**
+
+There's Gloomy, a bioluminescent mushroom that's not just for show. It lights your path, cleans the air, and sometimes, it spies on you.
+
+**Why Are You Doing This?**
+
+It's all a twisted game set up by "The Captain." You're playing for more than just survival; there are rewards, secrets to uncover, and a deeper message about society and power.
+
+**The Ending?**
+
+Just when you think you've figured it out, boom! The game ends with a shocking twist, hinting that this nightmare is far from over.
+
+---
+
+**GhastMarina: Voyage of the Betrayed** isn't just a game. It's a journey through a dystopian world filled with intrigue, suspense, and the constant shadow of betrayal. Are you ready to dive in?
 
 ## Genre:
 Action RPG / Visual Novel
