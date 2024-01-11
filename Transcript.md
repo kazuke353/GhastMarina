@@ -2,7 +2,35 @@ Title: **GhastMarina: Voyage of the Betrayed**
 
 **Prologue: A World in Shadows**
 
-In a world ravaged by cataclysm, where darkness reigns under an ash-darkened sky, the remnants of humanity cling to survival. The Undernet, a digital underworld, thrives as a beacon of twisted entertainment for the elite. Amidst this chaos, a mysterious invitation circulates among death row inmates, promising freedom in a deadly game aboard interconnected vessels.
+*Scene Setting: A desolate landscape under an ash-darkened sky. Ruins and remnants of a once thriving civilization are visible. The screen is tinted with shades of gray and muted colors, reflecting a world devoid of life and vibrancy.*
+
+**Narrator (Voice-Over):** "In a world ravaged by cataclysm, where darkness reigns and hope seems a distant memory, humanity clings to survival against all odds."
+
+*The camera pans over the bleak landscape, showing abandoned buildings, overgrown with vegetation, and streets filled with derelict vehicles. The sounds of a distant storm and the faint cries of unseen creatures echo in the background.*
+
+**Narrator (Voice-Over):** "Here, in the shadows of what was once a beacon of progress, lies the Undernet - a digital realm thriving amidst chaos, a sanctuary for the twisted and corrupt."
+
+*Cut to a scene of a dimly lit room filled with screens showing various parts of the decrepit world. Silhouettes of people are seen, their faces lit only by the screens' glow.*
+
+**Narrator (Voice-Over):** "Amidst this desolation, a mysterious invitation circulates among the condemned, promising freedom in a game of survival aboard vessels bound by secrets and despair."
+
+*The scene shifts to show a shadowy figure, 'The Captain,' placing sleek black GloomBands on a table. The camera focuses on the bands, symbolizing the impending journey of the game's participants.*
+
+**The Captain (Deep, Resonating Voice):** "Welcome to my game, the ultimate test of wills. Only the cunning will survive."
+
+*The screen fades to black, and the sound of a heavy thud is heard, followed by muffled voices.*
+
+**Narrator (Voice-Over):** "Thus begins the voyage of the betrayed, a journey into the unknown, where alliances are fragile, and betrayal lurks in every shadow."
+
+*Player Choice: [Show Introductory Credits] or [Skip to Game Start]*
+
+**[If 'Show Introductory Credits' is chosen]**
+*Credits roll over scenes of the various vessels, each with its unique and foreboding theme. The names of the key developers and contributors to the game are displayed.*
+
+**[If 'Skip to Game Start' is chosen]**
+*The scene transitions directly to Chapter 1: Awakening in Chains, where the protagonist, Noah, wakes up in a dimly lit shipping container, beginning the game's journey.*
+
+*Scene Conclusion: The prologue sets the tone for "GhastMarina: Voyage of the Betrayed," introducing players to the game's dark world, its primary antagonist, 'The Captain,' and the premise of the deadly game aboard interconnected vessels.*
 
 **Chapter 1: Awakening in Chains**
 
