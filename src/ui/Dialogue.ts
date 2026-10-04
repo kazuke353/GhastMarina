@@ -65,6 +65,12 @@ export class DialogueUI {
   }
 
   say(who: string, text: string, opts: { style?: string; title?: string; auto?: number } = {}): Promise<void> {
+    // a line that is superseded must still release whoever was waiting on it
+    if (this.resolve) {
+      const prev = this.resolve;
+      this.resolve = null;
+      prev();
+    }
     const c = (CAST as any)[who] ?? SPECIAL[who] ?? { name: who, color: '#3ef0ff', pitch: 150, timbre: 0.2 };
     this.open = true;
     this.el.classList.remove('hidden');
@@ -88,6 +94,11 @@ export class DialogueUI {
   }
 
   choose(opts: ChoiceOpt[]): Promise<number> {
+    if (this.choiceResolve) {
+      const prev = this.choiceResolve;
+      this.choiceResolve = null;
+      prev(0);
+    }
     this.open = true;
     this.choosing = true;
     this.autoT = 0;

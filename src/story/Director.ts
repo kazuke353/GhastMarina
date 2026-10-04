@@ -319,13 +319,14 @@ export class Director {
     return CHAPTER_DEFS[this.game.state.chapter];
   }
 
-  onLevelLoaded(w: World) {
+  onLevelLoaded(w: World, titleBackdrop = false) {
     this.levelToken++;
     this.talkPartner = null;
     const st = this.game.state;
     const def = this.chapterDef;
     // persistent world setup
     if (w.def.id === 'hub') this.populateHub(w);
+    if (titleBackdrop) return;
     const comp = COMPANION[st.chapter];
     if (comp && w.def.id !== 'hub' && w.def.id !== 'ballroom' && st.alive[comp] && !this.game.flag('nocomp_' + st.chapter)) {
       const n = new NPC(w, comp);
@@ -645,8 +646,8 @@ export class Director {
   setupTitle() {
     const g = this.game;
     this.abort();
-    void g.loadLevel('hub', 'deck', { fade: false }).then((w) => {
-      if (g.mode !== 'title') return;
+    void g.loadLevel('hub', 'deck', { fade: false, title: true }).then((w) => {
+      if (!w || g.mode !== 'title') return;
       w.player.root.visible = false;
       w.player.control = false;
       g.cinematic = true;

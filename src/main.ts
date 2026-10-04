@@ -31,7 +31,14 @@ if (params.get('test') === 'chars') {
       if (game.debug && params.has('auto')) game.autoplay = +(params.get('auto') || 0.2);
       game.start();
       const dbg = params.get('chapter');
-      if (dbg && game.debug) void game.newGame((params.get('diff') as any) ?? 'normal', dbg);
+      if (dbg && game.debug) {
+        void game.newGame((params.get('diff') as any) ?? 'normal', dbg);
+        // e.g. &set=final=truth,boss_gridlock_dead=1
+        for (const kv of (params.get('set') ?? '').split(',').filter(Boolean)) {
+          const [k, v] = kv.split('=');
+          game.state.flags[k] = v === undefined || v === '1' ? true : v;
+        }
+      }
     })
     .catch((e) => {
       console.error(e);

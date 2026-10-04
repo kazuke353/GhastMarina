@@ -55,6 +55,8 @@ export class World {
   bosses: Boss[] = [];
   promptTarget: { kind: 'int'; it: Interactable } | { kind: 'door'; d: Door } | { kind: 'npc'; n: NPC } | { kind: 'takedown'; e: Enemy } | null = null;
   safe: boolean;
+  /** low-ceiling volumes (e.g. the opening container) that clamp the follow camera */
+  ceilingZones: { minX: number; maxX: number; minZ: number; maxZ: number; h: number }[] = [];
   private sanityT = 0;
 
   constructor(public game: Game, public def: LevelDef, spawnId: string) {
@@ -426,7 +428,12 @@ export class World {
     this.tickers = this.tickers.filter((f) => f(dt));
     pl.update(dt);
     for (const d of this.doors) d.update(dt);
+    const frozen = (g as any).__freeze;
     for (const e of this.enemies) {
+      if (frozen) {
+        e.anim?.tick(dt);
+        continue;
+      }
       if (e.isBoss || e.pos.distanceTo(pl.pos) < 65 || e.state === 'chase') e.update(dt);
     }
     for (const e of this.enemies) if (e.removed) e.dispose();

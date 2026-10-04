@@ -359,3 +359,9 @@ body { background: var(--ink); color: var(--text); font-family: var(--ui); user-
   .stats { grid-template-columns: repeat(2, 1fr); }
   .skills { grid-template-columns: 1fr; }
 }
+
+/* cutscenes: hide gameplay widgets */
+#hud > * { transition: opacity .35s; }
+#hud.cine > .vitals, #hud.cine > .weapon, #hud.cine > .live, #hud.cine > .objective, #hud.cine > .prompt,
+#hud.cine > .crosshair, #hud.cine > .tips, #hud.cine > .bossbar, #hud.cine > .hitmark { opacity: 0 !important; }
+.hint.cine { opacity: 0 !important; }

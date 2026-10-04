@@ -33,7 +33,7 @@ m.set(36, 10, 'D');
 // ---- entities ----
 m.put(2, 36, 'P').put(1, 38, 'X');
 m.put(41, 1, 'E');
-m.put(4, 35, 'S').put(36, 15, 'S');
+m.put(4, 37, 'S').put(36, 15, 'S');
 m.put(35, 12, 'F').put(37, 12, 'T');
 m.put(34, 4, 'B').put(36, 8, 'b');
 // fuses, pistol

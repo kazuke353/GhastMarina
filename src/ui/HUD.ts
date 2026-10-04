@@ -116,6 +116,11 @@ export class HUD {
     this.visible = on;
     this.el.classList.toggle('off', !on);
   }
+  /** Fade gameplay widgets while a cutscene plays (toasts stay). */
+  cine(on: boolean) {
+    this.el.classList.toggle('cine', on);
+    this.hintEl.classList.toggle('cine', on);
+  }
 
   private set(key: string, el: HTMLElement, html: string) {
     if (this.last[key] === html) return;

@@ -10,7 +10,7 @@
     "build:single": "vite build --mode single",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "smoke": "node scripts/smoke.mjs"
+    "drive": "node scripts/drive.mjs"
   },
   "dependencies": {
     "three": "^0.186.1"

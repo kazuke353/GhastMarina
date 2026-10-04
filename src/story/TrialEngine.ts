@@ -268,6 +268,7 @@ export async function runTrial(d: Director, id: string): Promise<TrialResult> {
         case 'vote': {
           ui.setPhase('VOTING TIME');
           await say('captain', 'Pencils down! It’s VOTING TIME! Choose wisely… or don’t. It’s funnier when you don’t.');
+          g.ui.dlg.hide();
           for (;;) {
             const who = auto ? s.culprit : await ui.vote(st.alive);
             check();
@@ -275,6 +276,7 @@ export async function runTrial(d: Director, id: string): Promise<TrialResult> {
             await hurt();
           }
           const votes = tally(st.alive, s.culprit, st.suspicion);
+          g.ui.dlg.hide();
           await ui.tally(votes, s.culprit);
           check();
           break;
@@ -316,18 +318,21 @@ export async function runTrial(d: Director, id: string): Promise<TrialResult> {
             await say('elise', 'No. I’ve watched you lie for six weeks, Noah. I know your tells now.', 'despair');
             await say('captain', 'Ooh, so close. But they’ve seen too much, my little instrument.');
             const votes = tally(st.alive, 'noah', 100);
+            g.ui.dlg.hide();
             await ui.tally(votes, 'noah');
             await execute('noah', 'Lila… I proved it. People are exactly as bad as I thought. Including me.');
             throw new TrialFail();
           }
           await say('aria', 'You’re doing it right now. Turning them. Lila trusted you too, Noah.', 'despair');
           ui.setPhase('VOTING TIME');
+          g.ui.dlg.hide();
           for (;;) {
-            const who = await ui.vote(st.alive);
+            const who = auto ? 'aria' : await ui.vote(st.alive);
             check();
             if (who === 'aria') break;
             await say('captain', 'Mmm, no. The story needs a villain, Noah. Give them one.');
           }
+          g.ui.dlg.hide();
           await ui.tally(tally(st.alive, 'aria', 0), 'aria');
           await execute('aria', 'You know what the worst part is? You’ll believe your own lie by morning.');
           await say('captain', 'Bravo. BRAVO. My finest instrument.');

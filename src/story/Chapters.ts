@@ -69,6 +69,7 @@ function buildContainer(w: World, closed: boolean) {
   bx(-1.3, -1.18, -6.1, 6.1);
   bx(-1.25, 1.25, -6.2, -6.05);
   const door = bx(-1.25, 1.25, 6.05, 6.2);
+  w.ceilingZones.push({ minX: c.x - 1.25, maxX: c.x + 1.25, minZ: c.z - 6.1, maxZ: c.z + 6.1, h: 2.55 });
   door.active = closed;
   w.level.lights.push({ pos: c.clone().add(V(0, 2.3, -1)), color: new THREE.Color(0xffa060), intensity: 14, range: 9, flicker: 0.25 });
   w.level.lights.push({ pos: c.clone().add(V(0, 2.3, 3.5)), color: new THREE.Color(0xff8a50), intensity: 8, range: 7, flicker: 0.1 });
@@ -270,12 +271,24 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
       g.cinematic = true;
       g.music.play('none', 1);
       audio.setAmbience('none');
+      // an aerial establishing shot: the flotilla and its beam, seen through drifting ash
+      if (!g.world || g.world.def.id !== 'hub') await S.load('hub', 'deck', { fade: false });
+      const w = S.w;
+      w.player.root.visible = false;
+      w.player.control = false;
+      const spire = V(57, 0, 12);
+      S.shot(spire.clone().add(V(-190, 75, 170)), spire.clone().setY(16), { fov: 46, blend: 0, drift: V(4.2, -1.1, -3.8) });
+      audio.setAmbience('title');
+      void g.fade(0.45, 7);
       await S.guard(g.ui.narrate([
         'In a world ravaged by cataclysm — nuclear fire, then the meteors, then the volcanoes — the ash never settled. The night never ended.',
         'Humanity clings on underground, warmed by the geothermal mercy of GloomTech Industries.',
         'Above it all hums the Undernet: a digital realm thriving amidst chaos. A sanctuary for the twisted and the bored.',
         'And through the Undernet, a mysterious invitation circulates among the condemned. A promise of freedom — in a game of survival aboard vessels bound by secrets and despair.',
       ]));
+      await S.fade(1, 2);
+      audio.setAmbience('none');
+      w.player.root.visible = true;
       audio.startLoop('heli', 'helicopter', 0.9);
       await S.wait(4.5);
       audio.play('machinery', { vol: 0.8 });
@@ -330,7 +343,6 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
             n.anim.p.poseW = 1;
             n.anim.snap();
           });
-          g.rig.ceiling = 2.4;
           await S.cinematic(async () => {
             const face = pl.pos.clone().setY(0.35);
             S.shot(face.clone().add(V(0.9, 0.35, 1.2)), face.clone().add(V(0, 0.05, 0)), { fov: 40, blend: 0, drift: V(0, 0.02, 0.03) });
@@ -396,7 +408,16 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
             // the doors swing open — the reveal
             S.shot(c.clone().add(V(0, 1.6, 3.5)), c.clone().add(V(0, 1.5, 9)), { fov: 55, blend: 0.6 });
             await S.guard(cont.open());
-            g.rig.ceiling = 99;
+            // everyone stumbles out onto the deck
+            const deckSp = w.level.spawns.deck.pos;
+            inside.forEach((id, i) => {
+              const n = w.npc(id)!;
+              n.setPose(null);
+              n.anim.p.poseW = 0;
+              const tgt = deckSp.clone().add(V(-5 + (i % 6) * 2, 0, -1.5 + Math.floor(i / 6) * 2.2));
+              const doorPt = V(c.x + (i % 2 ? 0.4 : -0.4), 0, c.z + 7.2);
+              w.after(0.4 + i * 0.35, () => void n.walkTo(doorPt, 1.7).then(() => n.walkTo(tgt, 1.6)));
+            });
             S.shot(c.clone().add(V(5, 7, 9)), V(58.5, 22, 13.5), { fov: 58, blend: 2.5, drift: V(0.4, 0.8, 0.3) });
             g.music.play('hub', 4);
             audio.setAmbience('deck');
@@ -404,7 +425,6 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
             await S.thought('Ships. Six of them, chained around a pillar of light that punches straight through the ash. And the sea… the sea is frozen solid.');
           });
           g.ui.hud.show(true);
-          g.rig.ceiling = 99;
           for (const id of inside) {
             const n = w.npc(id)!;
             n.lookAtPlayer = true;
@@ -416,7 +436,7 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
           S.hint('[W][A][S][D] move · Mouse look · [Shift] sprint · [Ctrl] sneak', 8);
           await S.waitUntil(() => w.player.pos.z > cont.doorZ + 2.5);
           const deck = w.level.spawns.deck.pos;
-          const spire = V(57, 0, 19);
+          const spire = V(57, 0, 20.5);
           await S.cinematic(async () => {
             for (const id of SURVIVORS) {
               const n = w.npc(id as CastId);
@@ -426,13 +446,12 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
               n.setPose(null);
             }
             w.player.place(deck.clone().add(V(0, 0, 2)), Math.atan2(spire.x - deck.x, spire.z - deck.z));
-            const cap = captainHolo(S, spire.clone().add(V(0, 2.5, 0)), 4.2, Math.atan2(deck.x - spire.x, deck.z - spire.z));
-            void cap;
-            S.shot(deck.clone().add(V(-3, 1.4, 6)), spire.clone().setY(8), { fov: 55, blend: 0, drift: V(0.3, 0.1, 0) });
+            captainHolo(S, spire.clone(), 4.2, Math.atan2(deck.x - spire.x, deck.z - spire.z));
+            S.shot(V(35.5, 1.7, 26.2), spire.clone().setY(5.5), { fov: 50, blend: 0, drift: V(0.4, 0.15, -0.1) });
             await S.captain('Ah. My passengers. Death row’s finest — murderers, thieves, liars — plucked from your cells by an offer you were all too eager to accept.');
             await S.captain('You stand aboard the *GhastMarina*. Six vessels chained to the Polaris Core. Each one a little world. Each one… occupied.');
             await S.captain('The rules are simple. Survive. Explore. And every Sunday, gather in the Ballroom for a *Deck Trial*.');
-            S.shot(spire.clone().add(V(4, 4, 14)), spire.clone().setY(9), { fov: 40, blend: 1.2 });
+            S.shot(V(64, 2.5, 25.5), spire.clone().setY(6.5), { fov: 42, blend: 1.2 });
             await S.captain('Because one of you is not what you seem. One of you is my *mole*. A saboteur who will see you all fed to the deep.');
             await S.captain('Find the mole. Vote them out. The one you choose will be tranquilized by their wristband and cast into the *Isolation Zone*.');
             await S.captain('Choose wrong… and you’ll keep sharing your bunks with a viper.');
@@ -1157,7 +1176,7 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
         const arena = w.level.spawns.arena.pos;
         await S.step('core_arrive', async () => {
           await S.cinematic(async () => {
-            const reactor = arena.clone().add(V(0, 0, -6));
+            const reactor = coreCenter(w);
             S.shot(w.player.pos.clone().add(V(-3, 4, 6)), reactor.clone().setY(20), { fov: 60, blend: 0, drift: V(0.4, 0.3, 0) });
             await S.wait(2);
             await S.thought('The Polaris Core. The beam roars up through the ash like the planet is bleeding light.');
@@ -1230,11 +1249,15 @@ function drain(S: Script, w: World) {
 }
 
 // ------------------------------------------------------------------ the ending
+function coreCenter(w: World) {
+  const b = w.def.beam ?? [22.5, 20.5];
+  return V(b[0] * 3, 0, b[1] * 3);
+}
 async function ending(S: Script, w: World, boat: THREE.Object3D, truth: boolean) {
   const g = S.g;
   const st = g.state;
   const dock = w.level.spawns.dock.pos;
-  const reactor = w.level.spawns.arena.pos.clone().add(V(0, 0, -6));
+  const reactor = coreCenter(w);
   await S.cinematic(async () => {
     const cap = captainHolo(S, reactor.clone().add(V(0, 3, 4)), 4.5, 0);
     cap.yaw = Math.atan2(w.player.pos.x - cap.pos.x, w.player.pos.z - cap.pos.z);

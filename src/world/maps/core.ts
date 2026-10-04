@@ -38,7 +38,7 @@ export const CORE: LevelDef = {
     R: { floor: ';', ent: { t: 'prop', kind: 'reactor' } },
     c: { floor: '.', ent: { t: 'spawn', id: 'captain' } },
     a: { floor: '.', ent: { t: 'spawn', id: 'arena' } },
-    L: { floor: ';', ent: [{ t: 'prop', kind: 'lifeboat', yaw: 0 }, { t: 'spawn', id: 'lifeboat' }] },
+    L: { floor: ';', ent: { t: 'spawn', id: 'lifeboat' } }, // the boat itself is built (and launched) by the ch8 script
     b: { floor: ';', ent: { t: 'spawn', id: 'dock' } },
     G: { floor: '.', ent: { t: 'boss', kind: 'apex' } },
     w: { floor: '.', ent: { t: 'prop', kind: 'barrel', opts: { toxic: true } } },

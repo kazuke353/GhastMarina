@@ -120,7 +120,7 @@ export class UI {
       menu.appendChild(b);
       return b;
     };
-    if (save) {
+    if (save && save.chapter !== 'end') {
       const ch = CHAPTERS.find((c) => c.id === save.chapter);
       add(`Continue <small style="opacity:.6;margin-left:8px;letter-spacing:.05em;text-transform:none">${ch ? ch.num + ' — ' + ch.title : ''}</small>`, () => void this.game.continueGame());
     }
@@ -595,7 +595,7 @@ export class UI {
         res();
       });
       o.querySelector('button')!.addEventListener('click', () => ov.close());
-      setTimeout(() => ov.close(), 75000);
+      setTimeout(() => ov.close(), this.game.autoplay >= 0 ? 6000 : 75000);
     });
   }
 }

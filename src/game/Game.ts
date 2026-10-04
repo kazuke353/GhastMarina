@@ -134,7 +134,7 @@ export class Game {
     const loop = () => {
       requestAnimationFrame(loop);
       const now = performance.now();
-      let dt = Math.min(0.05, (now - this.last) / 1000);
+      let dt = Math.min(this.debug && this.autoplay >= 0 ? 0.1 : 0.05, (now - this.last) / 1000);
       this.last = now;
       this.frame(dt);
     };
@@ -197,7 +197,10 @@ export class Game {
       this.updatePresentation(rawDt, dt);
     }
     if (w) {
-      this.rig.ceiling = w.theme.ceiling ? w.theme.wallH : 99;
+      let ceil = w.theme.ceiling ? w.theme.wallH : 99;
+      const pp = w.player.pos;
+      for (const z of w.ceilingZones) if (pp.x > z.minX && pp.x < z.maxX && pp.z > z.minZ && pp.z < z.maxZ) ceil = Math.min(ceil, z.h);
+      this.rig.ceiling = ceil;
       this.rig.update(rawDt, w.player.pos, w.level, this.settings.data.shake);
       this.updateLights(rawDt);
       w.exterior?.update(rawDt, this.time, this.camera);
@@ -230,7 +233,8 @@ export class Game {
     // emitter at the GloomBand side of the chest, aimed where the camera looks
     const fwd = new THREE.Vector3(Math.sin(pl.yaw), 0, Math.cos(pl.yaw));
     const left = new THREE.Vector3(fwd.z, 0, -fwd.x);
-    this.flashlight.position.copy(pl.pos).add(new THREE.Vector3(0, 1.45, 0)).addScaledVector(fwd, 0.35).addScaledVector(left, 0.25);
+    // (kept just above/ahead of the head so the arms & weapon never sit inside the hot spot)
+    this.flashlight.position.copy(pl.pos).add(new THREE.Vector3(0, 1.9, 0)).addScaledVector(fwd, 0.55).addScaledVector(left, 0.12);
     if (this.rig.mode === 'follow') {
       const aimPt = this.camera.position.clone().add(this.rig.dir(new THREE.Vector3()).multiplyScalar(14));
       this.flashTarget.position.lerp(aimPt, damp(14, dt));
@@ -410,6 +414,7 @@ export class Game {
   }
   setLetterbox(on: boolean) {
     this.letterTarget = on ? 1 : 0;
+    this.ui.hud.cine(on);
   }
   wait(sec: number): Promise<void> {
     return new Promise((r) => setTimeout(r, sec * 1000));
@@ -419,11 +424,15 @@ export class Game {
   }
 
   // ---------------- levels ----------------
-  async loadLevel(id: string, spawn: string, opts: { fade?: boolean; pos?: [number, number]; yaw?: number; keepMusic?: boolean } = {}) {
+  private loadSeq = 0;
+  async loadLevel(id: string, spawn: string, opts: { fade?: boolean; pos?: [number, number]; yaw?: number; keepMusic?: boolean; title?: boolean } = {}) {
     const def = LEVELS[id];
     if (!def) throw new Error('Unknown level ' + id);
+    // a newer load (e.g. New Game pressed while the title backdrop is still loading) supersedes this one
+    const seq = ++this.loadSeq;
     this.loading = true;
     if (opts.fade !== false) await this.fade(1, 0.5);
+    if (seq !== this.loadSeq) return this.world as unknown as World;
     this.ui.hud.prompt('');
     this.ui.hud.bossBar(null);
     if (this.world) {
@@ -432,6 +441,7 @@ export class Game {
     }
     this.lightPool.off();
     await this.wait(0.05);
+    if (seq !== this.loadSeq) return this.world as unknown as World;
     const w = new World(this, def, spawn);
     this.world = w;
     if (opts.pos) {
@@ -460,7 +470,7 @@ export class Game {
     if (!opts.keepMusic) this.music.play((t.music as SongId) ?? 'explore', 2);
     w.player.equip(this.state.equipped, true);
     if (!this.state.weapons[this.state.equipped]) w.player.equip('pipe', true);
-    this.director.onLevelLoaded(w);
+    this.director.onLevelLoaded(w, !!opts.title);
     this.loading = false;
     if (opts.fade !== false) void this.fade(0, 0.8);
     if (opts.fade !== false && !this.cinematic) {

@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import type { Game } from '../game/Game';
 import type { ItemId } from '../world/LevelDef';
 import { giveItem } from '../entities/Interactables';
+import { makeBoss } from '../entities/Bosses';
+import type { BossKind, EnemyKind } from '../world/LevelDef';
 
 /** Debug / automated-test helpers, exposed as window.__GM.dbg when ?debug is set. */
 export function installDebug(g: Game) {
@@ -85,6 +87,43 @@ export function installDebug(g: Game) {
       ww.player.pos.copy(it.pos).addScaledVector(dir, 1.2).setY(0);
       await it.interact();
       return it.id + ' -> ' + it.label();
+    },
+    async talk(id: string) {
+      const n = w().npcs.find((x) => x.id === id);
+      if (!n) return 'no npc ' + id;
+      w().player.pos.copy(n.pos).add(new THREE.Vector3(0, 0, 1.4));
+      await g.director.talk(n);
+      return 'talked ' + id;
+    },
+    npcs() {
+      return w().npcs.map((n) => `${n.id} ${n.mode} @${n.pos.x.toFixed(0)},${n.pos.z.toFixed(0)}`);
+    },
+    /** spawn an enemy relative to the player (dx right, dz forward) */
+    spawn(kind: EnemyKind, dx = 0, dz = 4) {
+      const ww = w();
+      const p = ww.player.pos.clone().add(new THREE.Vector3(dx, 0, dz));
+      const e = ww.spawnEnemy(kind, p, {});
+      e.yaw = Math.PI;
+      return kind;
+    },
+    boss(kind: BossKind, dx = 0, dz = 8) {
+      const ww = w();
+      const b = makeBoss(ww, kind);
+      b.place(ww.player.pos.clone().add(new THREE.Vector3(dx, 0, dz)), Math.PI);
+      ww.scene.add(b.root);
+      ww.enemies.push(b);
+      ww.bosses.push(b);
+      return kind;
+    },
+    freeze(on = true) {
+      (g as any).__freeze = on;
+    },
+    cam(px: number, py: number, pz: number, lx: number, ly: number, lz: number, fov = 50) {
+      g.rig.setCine({ pos: new THREE.Vector3(px, py, pz), look: new THREE.Vector3(lx, ly, lz), fov, blend: 0 });
+      g.cinematic = true;
+    },
+    hud(on: boolean) {
+      g.ui.hud.show(on);
     },
     doors() {
       return w().doors.map((d) => `${d.id} ${d.locked ? 'L' : ''}${d.key ? ' key=' + d.key : ''}${d.flag ? ' flag=' + d.flag : ''} @${d.pos.x.toFixed(0)},${d.pos.z.toFixed(0)}`);
