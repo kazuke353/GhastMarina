@@ -67,6 +67,8 @@ export class Game {
   /** Debug/test: seconds before dialogue auto-advances (-1 = off). */
   autoplay = -1;
   autoChoice = 0;
+  /** with autoplay on, also auto-solve Deck Trial puzzles */
+  autoTrial = true;
 
   constructor(public app: HTMLElement) {
     this.renderer = new Renderer(app);

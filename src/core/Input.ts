@@ -111,6 +111,10 @@ export class Input {
       this.locked = document.pointerLockElement === this.el;
       this.onLockChange?.(this.locked);
     });
+    document.addEventListener('pointerlockerror', () => {
+      this.lockFailed = true;
+      this.dragLook = true;
+    });
     window.addEventListener('gamepadconnected', () => (this.hasPad = true));
   }
 

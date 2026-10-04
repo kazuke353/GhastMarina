@@ -103,7 +103,8 @@ export async function runTrial(d: Director, id: string): Promise<TrialResult> {
     }
     const side = new THREE.Vector3(-s.face.z, 0, s.face.x).multiplyScalar(rand(-0.9, 0.9));
     const h = CAST[who as CastId]?.look.height ?? 1;
-    const pos = s.pos.clone().addScaledVector(s.face, style === 'low' ? 1.6 : 2.3).add(side).setY(style === 'low' ? 0.9 : 1.75 * h);
+    // (the podium stands 0.75m in front of each seat: keep every angle above/beyond it)
+    const pos = s.pos.clone().addScaledVector(s.face, style === 'low' ? 2.8 : 2.3).add(side).setY(style === 'low' ? 1.25 : 1.75 * h);
     const look = s.pos.clone().setY(1.58 * h);
     g.rig.setCine({ pos, look, fov: style === 'dutch' ? 36 : 40, blend: lastSpeaker === who ? 0.3 : 0, drift: s.face.clone().multiplyScalar(-0.08), shakeAmt: style === 'dutch' ? 0.2 : 0 });
     lastSpeaker = who;
@@ -142,7 +143,7 @@ export async function runTrial(d: Director, id: string): Promise<TrialResult> {
   };
 
   // debug/test autoplay: answer every question correctly
-  const auto = g.autoplay >= 0;
+  const auto = g.autoplay >= 0 && g.autoTrial;
   const runSteps = async (steps: TStep[]): Promise<TrialResult | null> => {
     for (const s of steps) {
       check();
@@ -288,6 +289,7 @@ export async function runTrial(d: Director, id: string): Promise<TrialResult> {
         case 'finalChoice': {
           camOn('noah', 'low');
           await g.ui.dlg.say('noah', 'Every eye in the room. Every viewer on the Undernet. Waiting.', { style: 'thought', title: '(thinking)' });
+          if (auto && st.flags.debug_mask) g.autoChoice = 1;
           const c = await g.ui.dlg.choose([
             { text: 'Tell the truth. All of it.', kind: 'conscience' },
             { text: 'Fight back. Discredit the archive — and Aria with it.', kind: 'mask' },

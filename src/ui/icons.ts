@@ -1,5 +1,5 @@
 const S = (body: string, color = 'currentColor') =>
-  `<svg viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${body}</svg>`;
+  `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="${color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${body}</svg>`;
 
 export const ICONS: Record<string, (c?: string) => string> = {
   ammo: (c = '#ffd060') => S('<rect x="5" y="9" width="4" height="11" rx="1"/><path d="M5 9l2-5 2 5"/><rect x="11" y="9" width="4" height="11" rx="1"/><path d="M11 9l2-5 2 5"/><rect x="17" y="12" width="3" height="8" rx="1"/>', c),

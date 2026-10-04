@@ -211,7 +211,7 @@ body { background: var(--ink); color: var(--text); font-family: var(--ui); user-
 .skill .pips i.on { background: var(--cyan); box-shadow: 0 0 6px var(--cyan); }
 .skill h6 { margin: 0; font: 700 13px var(--ui); color: #fff; }
 .skill p { margin: 4px 0 0; font: 400 11px var(--ui); color: var(--dim); }
-.mapc { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.mapc { width: 100%; height: calc(100% - 30px); min-height: 320px; display: flex; align-items: center; justify-content: center; }
 .mapc canvas { max-width: 100%; max-height: 100%; image-rendering: pixelated; border: 1px solid var(--line); background: #02060a; }
 .ad { padding: 14px; border: 1px solid rgba(255,255,255,.12); margin-bottom: 12px; background: linear-gradient(135deg, rgba(62,240,255,.06), rgba(176,108,255,.06)); }
 .ad h4 { margin: 0 0 6px; font: 400 24px var(--display); letter-spacing: .1em; color: #fff; }
