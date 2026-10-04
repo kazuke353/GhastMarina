@@ -47,13 +47,39 @@ export class NPC {
     if (id === 'captain') this.makeHologram();
   }
 
+  private holoMat: THREE.MeshBasicMaterial | null = null;
+  private holoTime = { value: 0 };
+  private holoAlpha = { value: 0.6 };
+
+  /** The Captain only ever appears as a broadcast: additive red light with drifting scanlines and signal flicker. */
   makeHologram() {
     this.hologram = true;
-    const m = this.model.material;
-    m.transparent = true;
-    m.opacity = 0.7;
-    m.emissive.setRGB(0.5, 0.02, 0.06);
-    m.depthWrite = false;
+    const mat = new THREE.MeshBasicMaterial({
+      color: new THREE.Color(2.4, 0.32, 0.42),
+      transparent: true,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      side: THREE.DoubleSide,
+    });
+    mat.onBeforeCompile = (sh) => {
+      sh.uniforms.uTime = this.holoTime;
+      sh.uniforms.uAlpha = this.holoAlpha;
+      sh.vertexShader = sh.vertexShader
+        .replace('#include <common>', '#include <common>\nvarying float vHoloY;')
+        .replace('#include <project_vertex>', '#include <project_vertex>\nvHoloY = (modelMatrix * vec4(transformed, 1.0)).y;');
+      sh.fragmentShader = sh.fragmentShader
+        .replace('#include <common>', '#include <common>\nvarying float vHoloY; uniform float uTime; uniform float uAlpha;')
+        .replace(
+          '#include <color_fragment>',
+          `#include <color_fragment>
+          float scan = 0.55 + 0.45 * step(0.45, fract(vHoloY * 9.0 - uTime * 1.6));
+          float band = smoothstep(0.0, 0.08, abs(fract(vHoloY * 0.35 - uTime * 0.4) - 0.5));
+          diffuseColor.rgb *= scan * (0.6 + 0.4 * band);
+          diffuseColor.a = uAlpha;`,
+        );
+    };
+    this.holoMat = mat;
+    this.model.mesh.material = mat;
     this.anim.p.float = 1;
     this.root.traverse((o) => ((o as THREE.Mesh).castShadow = false));
   }
@@ -162,8 +188,8 @@ export class NPC {
     this.root.position.set(this.pos.x, 0, this.pos.z);
     this.root.rotation.y = this.yaw;
     if (this.hologram) {
-      const m = this.model.material;
-      m.opacity = 0.55 + Math.sin(w.time * 13) * 0.08 + (Math.random() < 0.03 ? -0.3 : 0);
+      this.holoTime.value = w.time;
+      this.holoAlpha.value = 0.42 + Math.sin(w.time * 13) * 0.05 + (Math.random() < 0.03 ? -0.25 : 0);
       this.root.position.y = 0.95 + Math.sin(w.time * 1.2) * 0.05;
     }
   }
@@ -223,6 +249,7 @@ export class NPC {
   dispose() {
     this.root.parent?.remove(this.root);
     this.model.material.dispose();
+    this.holoMat?.dispose();
     this.model.mesh.geometry.dispose();
   }
 }

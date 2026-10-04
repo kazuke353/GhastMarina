@@ -294,17 +294,18 @@ body { background: var(--ink); color: var(--text); font-family: var(--ui); user-
 .trial .susp { position: absolute; right: 28px; top: 60px; width: 220px; font: 600 11px var(--ui); letter-spacing: .2em; color: var(--dim); }
 .trial .susp .bar > i { background: linear-gradient(90deg, #ffd84a, #ff2a4a); }
 .debate { position: absolute; inset: 0; overflow: hidden; pointer-events: auto; cursor: crosshair; }
-.stmt { position: absolute; font: 700 clamp(20px, 2.6vw, 34px)/1.25 var(--ui); color: #fff; white-space: nowrap; text-shadow: 0 2px 0 #000, 0 0 12px rgba(0,0,0,.9); padding: 6px 12px; }
+.stmt { position: absolute; font: 700 clamp(20px, 2.6vw, 34px)/1.25 var(--ui); color: #fff; white-space: normal; max-width: min(62vw, 780px); text-shadow: 0 2px 0 #000, 0 0 12px rgba(0,0,0,.9); padding: 6px 12px; }
 .stmt .who { display: block; font: 400 16px var(--shout); letter-spacing: .12em; color: var(--pink); }
 .stmt .wp { color: var(--gold); text-shadow: 0 0 14px rgba(255,216,74,.8), 0 2px 0 #000; cursor: pointer; border-bottom: 3px solid var(--gold); padding: 0 2px; }
 .stmt .wp:hover { color: #fff; background: rgba(255,216,74,.3); }
 .stmt .ag { color: var(--green); border-bottom-color: var(--green); text-shadow: 0 0 14px rgba(125,255,138,.8), 0 2px 0 #000; }
-.bullets { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); display: flex; gap: 8px; pointer-events: auto; flex-wrap: wrap; justify-content: center; max-width: 94vw; }
-.bullet { font: 600 13px var(--ui); padding: 8px 14px; background: rgba(20,4,16,.9); border: 1px solid rgba(255,95,210,.4); color: #f0d8ec; cursor: pointer; clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%); padding-right: 22px; }
+/* the Truth Bullet magazine: a stack on the left edge, clear of the speaker's face */
+.bullets { position: absolute; left: 20px; bottom: 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; pointer-events: auto; max-height: calc(100% - 150px); overflow-y: auto; }
+.bullet { font: 600 13px var(--ui); padding: 5px 14px; min-width: 190px; background: rgba(20,4,16,.9); border: 1px solid rgba(255,95,210,.4); color: #f0d8ec; cursor: pointer; clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%); padding-right: 22px; }
 .bullet.on { background: var(--pink); color: #000; }
 .bullet small { display: block; font-size: 10px; letter-spacing: .2em; opacity: .7; }
-.debate-help { position: absolute; left: 50%; top: 18px; transform: translateX(-50%); font: 600 13px var(--ui); color: var(--text); background: rgba(0,0,0,.55); padding: 6px 14px; pointer-events: none; }
-.dtimer { position: absolute; left: 50%; top: 52px; transform: translateX(-50%); width: 300px; height: 6px; background: rgba(255,255,255,.12); }
+.debate-help { position: absolute; left: 50%; top: 18px; transform: translateX(-50%); width: min(560px, 46vw); text-align: center; font: 600 12px/1.5 var(--ui); color: var(--text); background: rgba(0,0,0,.55); padding: 6px 14px; pointer-events: none; }
+.dtimer { position: absolute; left: 50%; top: 74px; transform: translateX(-50%); width: 300px; height: 6px; background: rgba(255,255,255,.12); }
 .dtimer i { display: block; height: 100%; background: var(--gold); transform-origin: left; }
 .shout { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-6deg); font: 400 clamp(60px, 11vw, 150px) var(--shout); letter-spacing: .04em; color: #fff; white-space: nowrap;
   text-shadow: 6px 6px 0 var(--pink), -3px -3px 0 #000, 0 0 40px rgba(255,95,210,.8); animation: shout 1.4s forwards; pointer-events: none; }

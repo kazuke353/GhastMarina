@@ -19,7 +19,7 @@ You play Noah, Participant #07. You're clever and guarded, and you keep losing t
   - a lead pipe, fire axe, pistol, shotgun and arc thrower
   - silent takedowns, flares, a flashlight that reveals phantoms
   - headshots, staggers and dodge-rolls
-- **Twenty mutant types** that patrol, hunt, burrow, disguise themselves and swarm. **Seven multi-phase bosses**: the Gridlock Commuter, the Foreman, Subject Zero, the Leviathan, Mother Bloom, the Warden and the Apex.
+- **Twenty mutant types** that patrol, hunt, burrow, disguise themselves and swarm. **Seven multi-phase bosses**: Gridlock, the Foreman, Subject Zero, the Leviathan, Mother Bloom, the Warden and the Apex.
 - **Hazards on every vessel:** hydraulic presses, steam vents, conveyors, laser curtains, electrified water, spore pods and frozen floors.
 - **Your GloomBand:** inventory, evidence, a voyage log, a map, private messages and skills. It also hosts the GloomOS breach hacking minigame.
 - **Sanity:** blackouts, whispers, hallucinated mutants and Gloomy the mushroom.
@@ -36,7 +36,7 @@ You play Noah, Participant #07. You're clever and guarded, and you keep losing t
 | Interact, talk, takedown | `E` |
 | Dodge roll | `Space` |
 | Reload | `R` |
-| Weapons / quick swap | `1`–`4` / `Q` |
+| Weapons (melee, pistol, shotgun, arc) / quick swap | `1`–`4` / `Q` |
 | Flashlight | `F` |
 | Throw flare | `G` |
 | Heal | `H` |
@@ -56,6 +56,8 @@ npm run build          # static build in dist/
 npm run build:single   # one self-contained HTML file in dist-single/
 npm run typecheck
 ```
+
+Pushing to `main` builds the game and deploys it to GitHub Pages through `.github/workflows/deploy.yml`. To turn that on, open the repository settings, go to **Pages**, and set the source to **GitHub Actions**.
 
 Use a recent desktop browser with WebGL 2. The game saves to `localStorage` automatically and at Gloomy Shrines. After you've reached a chapter, you can replay it from Chapter Select on the title screen.
 

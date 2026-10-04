@@ -10,7 +10,8 @@
     "build:single": "vite build --mode single",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "drive": "node scripts/drive.mjs"
+    "drive": "node scripts/drive.mjs",
+    "build:artifact": "vite build --mode single && node scripts/artifact.mjs"
   },
   "dependencies": {
     "three": "^0.186.1"
