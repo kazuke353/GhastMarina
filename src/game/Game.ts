@@ -87,7 +87,8 @@ export class Game {
     this.moon = new THREE.DirectionalLight(0x8090b0, 0);
     this.moon.position.set(-30, 60, 20);
     this.scene.add(this.moon);
-    this.flashlight = new THREE.SpotLight(0xd8f4ff, 0, 30, 0.48, 0.55, 1.3);
+    // gentle (non-physical) decay: people standing right beside Noah aren't blown out, the far end still reads
+    this.flashlight = new THREE.SpotLight(0xd8f4ff, 0, 30, 0.48, 0.55, 0.7);
     this.flashlight.castShadow = true;
     this.flashlight.shadow.mapSize.set(1024, 1024);
     this.flashlight.shadow.camera.near = 0.3;
@@ -226,7 +227,7 @@ export class Game {
     const pl = w.player;
     const on = pl.flashlight && !pl.dead && (this.mode === 'play' || this.cinematic) && !(this.mode === 'trial');
     const night = (this.state.skills.nighteyes ?? 0) > 0;
-    const targetI = on ? (night ? 60 : 42) : 0;
+    const targetI = on ? (night ? 11 : 8) : 0;
     this.flashlight.intensity = lerp(this.flashlight.intensity, targetI, damp(18, dt));
     this.flashlight.angle = night ? 0.62 : 0.5;
     this.flashlight.distance = night ? 34 : 28;
@@ -399,6 +400,7 @@ export class Game {
     audio.play('objection', { vol: 0.35 });
     await this.ui.evidenceCard(id);
     this.director.emit('evidence:' + id);
+    this.director.emit('evidence');
     void EVIDENCE;
   }
 
@@ -461,7 +463,7 @@ export class Game {
     // theme values are authored in "artist" units; scale into three's physical light units
     this.hemi.intensity = t.hemi[2] * 2.6;
     this.amb.color.set(t.hemi[0]).lerp(new THREE.Color(0xffffff), 0.45);
-    this.amb.intensity = t.hemi[2] * 3.2;
+    this.amb.intensity = t.hemi[2] * (t.open ? 3.2 : 4.6);
     this.moon.intensity = t.open ? 1.6 : 0;
     this.moon.color.set(t.dir ? t.dir[0] : 0x8fa4d0);
     if (t.dir) this.moon.position.set(t.dir[2][0], t.dir[2][1], t.dir[2][2]).normalize().multiplyScalar(80);

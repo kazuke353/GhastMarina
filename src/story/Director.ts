@@ -59,8 +59,14 @@ export class Script {
   waitEvent(e: string) {
     return this.guard(this.d.waitEvent(e));
   }
-  waitAny(evs: string[]) {
-    return this.guard(Promise.race(evs.map((e) => (e.startsWith('flag:') && this.g.flag(e.slice(5)) ? Promise.resolve(e) : this.d.waitEvent(e).then(() => e)))));
+  /**
+   * Resolve with the first of `evs` to fire. A 'flag:x' entry whose flag is already set can't fire again, so it is
+   * ignored (callers re-check state in their loop); if nothing is left to wait for, yield briefly instead of spinning.
+   */
+  waitAny(evs: string[]): Promise<string> {
+    const pending = evs.filter((e) => !(e.startsWith('flag:') && this.g.flag(e.slice(5))));
+    if (!pending.length) return this.guard(this.d.waitGame(0.25).then(() => evs[0]));
+    return this.guard(Promise.race(pending.map((e) => this.d.waitEvent(e).then(() => e))));
   }
   waitUntil(pred: () => boolean) {
     return this.guard(this.d.waitUntil(pred));
@@ -417,6 +423,7 @@ export class Director {
         this.game.setFlag(key);
         if (entry.flag) this.game.setFlag(entry.flag);
         this.emit('talked:' + n.id);
+        this.emit('talked');
       } else {
         const gen = GENERIC_TALK[n.id] ?? [['...']];
         const pick = companion ? COMPANION_BARKS[n.id] ?? gen : gen;

@@ -35,14 +35,24 @@ for (const s of steps) {
       const tEnd = Date.now() + (s.timeout || 30000);
       let ok = false;
       while (Date.now() < tEnd) {
-        ok = await page.evaluate(s.until).catch(() => false);
+        ok = await Promise.race([page.evaluate(s.until).catch(() => false), new Promise((res) => setTimeout(() => res('hung'), 30000))]);
+        if (ok === 'hung') {
+          console.log('UNTIL HUNG (page main thread frozen):', s.until.slice(0, 100));
+          ok = false;
+          break;
+        }
         if (ok) break;
         await page.waitForTimeout(250);
       }
       console.log(`until ${ok ? 'ok' : 'TIMEOUT'}: ${s.until.slice(0, 80)}`);
     }
     if (s.eval) {
-      const r = await page.evaluate(s.eval);
+      const hung = Symbol('hung');
+      const r = await Promise.race([page.evaluate(s.eval), new Promise((res) => setTimeout(() => res(hung), s.timeout || 60000))]);
+      if (r === hung) {
+        console.log('EVAL TIMEOUT (page main thread hung?):', s.eval.slice(0, 100));
+        break;
+      }
       if (r !== undefined && r !== null) console.log('eval:', typeof r === 'string' ? r : JSON.stringify(r).slice(0, 2000));
     }
     if (s.key) {

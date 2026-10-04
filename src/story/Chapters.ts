@@ -1164,6 +1164,8 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
         const lb = buildProp('lifeboat', 3, {});
         const lsp = w.level.spawns.lifeboat;
         lb.obj.position.copy(lsp.pos);
+        lb.obj.rotation.y = Math.PI / 2; // bow to the open sea (east)
+        w.level.addBox({ minX: lsp.pos.x - 3, maxX: lsp.pos.x + 3, minZ: lsp.pos.z - 1.25, maxZ: lsp.pos.z + 1.25, h: 2.5 });
         w.scene.add(lb.obj);
         if (truth) {
           for (const id of ['hana', 'aria'] as CastId[]) {
@@ -1258,6 +1260,10 @@ async function ending(S: Script, w: World, boat: THREE.Object3D, truth: boolean)
   const st = g.state;
   const dock = w.level.spawns.dock.pos;
   const reactor = coreCenter(w);
+  // light the farewell: a floodlight over the dock and a lamp that rides with the boat
+  w.level.lights.push({ pos: dock.clone().add(V(-2, 4.5, 2)), color: new THREE.Color(0xffd8a0), intensity: 26, range: 16 });
+  const boatLamp = { pos: boat.position.clone().add(V(0, 2.6, 0)), color: new THREE.Color(0xffb070), intensity: 30, range: 18 };
+  w.level.lights.push(boatLamp);
   await S.cinematic(async () => {
     const cap = captainHolo(S, reactor.clone().add(V(0, 3, 4)), 4.5, 0);
     cap.yaw = Math.atan2(w.player.pos.x - cap.pos.x, w.player.pos.z - cap.pos.z);
@@ -1315,6 +1321,7 @@ async function ending(S: Script, w: World, boat: THREE.Object3D, truth: boolean)
     const ride = () => {
       const k = (performance.now() - t0) / 9000;
       boat.position.set(start.x + k * k * 60, start.y - Math.min(14, k * 18), start.z + Math.sin(k * 3) * 1.5);
+      boatLamp.pos.copy(boat.position).add(V(0, 2.6, 0));
       if (k < 1) requestAnimationFrame(ride);
     };
     ride();

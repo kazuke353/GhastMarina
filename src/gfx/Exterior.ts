@@ -29,7 +29,7 @@ void main(){
   float hole = smoothstep(0.75, 0.98, y) * uBeamOn;
   vec3 cloudCol = mix(uHorizon * 1.6, uGlow * 0.6, bg) + uGlow * uFlash * 1.5;
   col = mix(col, cloudCol, clouds * (1.0 - hole * 0.7));
-  col += uGlow * bg * 0.35;
+  col += uGlow * bg * 0.25;
   // stars in the hole
   vec2 sp = d.xz / (y + 0.01) * 40.0;
   float st = step(0.985, h(floor(sp))) * hole * (0.6 + 0.4 * sin(uTime * 3.0 + h(floor(sp)) * 40.0));
@@ -105,6 +105,8 @@ export class Exterior {
   private skyMat: THREE.ShaderMaterial;
   private seaMat: THREE.ShaderMaterial | null = null;
   private beamMats: THREE.ShaderMaterial[] = [];
+  private beamBase: number[] = [];
+  private flare: THREE.Sprite | null = null;
   private boltTimer = 0;
   beamOn = 1;
   vessels: THREE.Group | null = null;
@@ -171,13 +173,15 @@ export class Exterior {
       mesh.renderOrder = 15;
       return mesh;
     };
-    g.add(mk(2.2, 9, new THREE.Color(0.8, 1.6, 2.2)));
-    g.add(mk(6, 1.6, new THREE.Color(0.3, 0.8, 1.6)));
-    g.add(mk(16, 0.35, new THREE.Color(0.2, 0.5, 1.2)));
+    g.add(mk(1.5, 7, new THREE.Color(0.85, 1.6, 2.3)));
+    g.add(mk(3.6, 1.0, new THREE.Color(0.3, 0.8, 1.6)));
+    g.add(mk(9, 0.2, new THREE.Color(0.2, 0.5, 1.2)));
+    this.beamBase = this.beamMats.map((m) => m.uniforms.uPower.value);
     // base flare
-    const sm = new THREE.SpriteMaterial({ map: glowTexture(), color: new THREE.Color(0.7, 1.5, 2.3), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
+    const sm = new THREE.SpriteMaterial({ map: glowTexture(), color: new THREE.Color(0.5, 1.1, 1.7), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
     const sp = new THREE.Sprite(sm);
-    sp.scale.set(34, 34, 1);
+    sp.scale.set(22, 22, 1);
+    this.flare = sp;
     sp.position.y = 4;
     sp.renderOrder = 16;
     g.add(sp);
@@ -333,10 +337,15 @@ export class Exterior {
           this.boltTimer = 0.4 + Math.random() * 2.5;
         }
       }
-      for (const m of this.beamMats) {
+      // up close the outer halo layers would wash the whole screen out; fade them with distance
+      const dx = camera.position.x - this.beamPos.x, dz = camera.position.z - this.beamPos.z;
+      const k = THREE.MathUtils.smoothstep(Math.hypot(dx, dz), 15, 120);
+      this.beamMats.forEach((m, i) => {
         m.uniforms.uTime.value = time;
         m.uniforms.uOn.value = this.beamOn;
-      }
+        m.uniforms.uPower.value = this.beamBase[i] * (i === 0 ? 0.6 + 0.4 * k : 0.12 + 0.88 * k);
+      });
+      if (this.flare) (this.flare.material as THREE.SpriteMaterial).opacity = 0.35 + 0.65 * k;
     } else if (this.bolts) this.bolts.geometry.setDrawRange(0, 0);
     if (this.beam) this.beam.visible = this.beamOn > 0.01;
     u.uFlash.value = this.flash;

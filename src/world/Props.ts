@@ -546,10 +546,16 @@ export const PROPS: Record<string, PropFn> = {
   },
   lifeboat: () => {
     const P = PM();
-    const g = group(part(geo.box, P.paint, 0xff6a20, [0, 1.0, 0], [2.4, 1.6, 6]));
-    g.add(part(geo.hemi, P.paint, 0xff6a20, [0, 1.8, 0], [1.2, 0.9, 2.9]));
-    g.add(part(geo.box, P.paint, 0x1a1a1a, [0, 1.9, 2.0], [1.6, 0.4, 0.05]));
-    g.add(part(geo.box, P.paint, 0xffffff, [1.21, 1.2, 0], [0.02, 0.2, 5]));
+    // enclosed survival craft: orange hull with a wedge bow, domed canopy, lit portholes
+    const g = group(part(geo.box, P.paint, 0xff6a20, [0, 0.95, -0.3], [2.4, 1.3, 5.0]));
+    g.add(part(geo.box, P.paint, 0xff6a20, [0, 0.95, 2.2], [1.7, 1.3, 1.7], [0, Math.PI / 4, 0]));
+    g.add(part(geo.box, P.paint, 0x2a2a2a, [0, 0.25, 0], [2.3, 0.3, 5.6]));
+    g.add(part(geo.hemi, P.paint, 0xff7a30, [0, 1.6, -0.4], [1.15, 0.95, 2.5]));
+    g.add(part(geo.box, P.paint, 0xffffff, [1.21, 1.35, -0.3], [0.02, 0.18, 4.8]));
+    g.add(part(geo.box, P.paint, 0xffffff, [-1.21, 1.35, -0.3], [0.02, 0.18, 4.8]));
+    for (const sx of [-1, 1]) for (let i = 0; i < 4; i++) g.add(part(geo.box, P.glowV, 0xffd890, [sx * 1.02, 1.95, -1.9 + i * 0.95], [0.06, 0.2, 0.42]));
+    g.add(part(geo.box, P.paint, 0x1a1a1a, [0, 2.45, -0.4], [0.5, 0.25, 0.9]));
+    g.add(part(geo.box, P.glowV, 0xff3030, [0, 2.65, -0.4], [0.12, 0.12, 0.12]));
     return { obj: g, boxes: [{ x: 0, z: 0, w: 2.4, d: 6, h: 2.5, block: true }], shadow: true };
   },
   pipeRun: (r, o) => {
