@@ -463,7 +463,7 @@ export class Game {
     // theme values are authored in "artist" units; scale into three's physical light units
     this.hemi.intensity = t.hemi[2] * 2.6;
     this.amb.color.set(t.hemi[0]).lerp(new THREE.Color(0xffffff), 0.45);
-    this.amb.intensity = t.hemi[2] * (t.open ? 3.2 : 4.6);
+    this.amb.intensity = t.ambient ?? t.hemi[2] * (t.open ? 4.2 : 7.5);
     this.moon.intensity = t.open ? 1.6 : 0;
     this.moon.color.set(t.dir ? t.dir[0] : 0x8fa4d0);
     if (t.dir) this.moon.position.set(t.dir[2][0], t.dir[2][1], t.dir[2][2]).normalize().multiplyScalar(80);

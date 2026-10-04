@@ -104,7 +104,9 @@ export class UI {
     const t = div('title-screen');
     t.innerHTML = `<div class="logo"><h1 data-t="GHASTMARINA">GHAST<span>MARINA</span></h1><h2>Voyage of the Betrayed</h2>
       <div class="sub">Twelve condemned strangers. Six haunted vessels. One traitor — and it might be you.</div></div>
-      <div class="menu"></div><div class="title-foot">A GLOOMTECH™ PRODUCTION · BROADCAST LIVE ON THE UNDERNET · <span id="title-hint">CLICK OR PRESS ANY KEY TO ENABLE SOUND</span></div>`;
+      <div class="menu"></div><div class="title-foot">A GLOOMTECH™ PRODUCTION · BROADCAST LIVE ON THE UNDERNET · <span id="title-hint">CLICK OR PRESS ANY KEY TO ENABLE SOUND</span>${
+        matchMedia('(pointer: coarse)').matches && !matchMedia('(pointer: fine)').matches ? '<br><span style="color:var(--gold)">BEST PLAYED WITH KEYBOARD &amp; MOUSE OR A GAMEPAD</span>' : ''
+      }</div>`;
     const menu = t.querySelector('.menu')!;
     const add = (label: string, fn: () => void, disabled = false, cls = '') => {
       const b = document.createElement('button');

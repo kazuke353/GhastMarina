@@ -355,7 +355,7 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
             audio.setMuffle(false);
             await S.thought('Where… am I?');
             pl.anim.p.pose = 'sitFloor';
-            S.shot(c.clone().add(V(0.9, 1.5, -1.0)), pl.pos.clone().setY(0.8), { fov: 48, blend: 1.4 });
+            S.shot(V(c.x + 0.8, 1.35, pl.pos.z + 2.3), V(pl.pos.x, 0.8, pl.pos.z), { fov: 46, blend: 1.4 });
             await S.wait(1.4);
             audio.play('chime', { vol: 0.5 });
             await S.band('GloomOS 9.1 booting… Biometric lock confirmed. Welcome, *Participant #07*.');
@@ -366,12 +366,13 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
             await S.wait(0.6);
             S.d.autoCam = false;
             // close-ups framed from the centre aisle so nobody else blocks the lens
+            // speakers sit up (nobody stands into the shot); the camera looks down the aisle over the seated heads
             const look = (id: CastId) => {
               const n = w.npc(id)!;
-              n.setPose(null);
+              if (n.anim.p.pose !== 'sitFloor') n.setPose('sitFloor');
               const side = Math.sign(n.pos.x - c.x) || 1;
-              const cam = V(c.x - side * 0.15, 1.25, n.pos.z + 1.35);
-              S.shot(cam, n.pos.clone().setY(1.25), { fov: 46, blend: 0.6 });
+              const cam = V(c.x - side * 0.25, 1.75, n.pos.z + 1.9);
+              S.shot(cam, V(n.pos.x, 0.85, n.pos.z), { fov: 44, blend: 0.5 });
             };
             look('hana');
             await S.say('hana', 'Hey — hey! Is everyone breathing? Count off! I’m Hana!');
@@ -400,11 +401,10 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
             audio.play('chime', { vol: 0.7 });
             await S.wait(0.15);
             audio.play('chime', { vol: 0.7, pitch: 1.1 });
-            for (const id of inside) w.npc(id)?.setPose('band');
+            for (const id of inside) w.npc(id)?.setPose('sitFloor');
             await S.wait(0.8);
             await S.captain('Welcome aboard, inmates. Survive, and you’re free. Fail, and you feed the abyss.');
             await S.captain('Let the voyage begin.');
-            for (const id of inside) w.npc(id)?.setPose(null);
             // the doors swing open — the reveal
             S.shot(c.clone().add(V(0, 1.6, 3.5)), c.clone().add(V(0, 1.5, 9)), { fov: 55, blend: 0.6 });
             await S.guard(cont.open());
@@ -418,13 +418,15 @@ export const CHAPTER_DEFS: Record<string, ChapterDef> = {
               const doorPt = V(c.x + (i % 2 ? 0.4 : -0.4), 0, c.z + 7.2);
               w.after(0.4 + i * 0.35, () => void n.walkTo(doorPt, 1.7).then(() => n.walkTo(tgt, 1.6)));
             });
-            S.shot(c.clone().add(V(5, 7, 9)), V(58.5, 22, 13.5), { fov: 58, blend: 2.5, drift: V(0.4, 0.8, 0.3) });
+            S.shot(c.clone().add(V(-4, 4.5, 10)), V(58.5, 9, 13.5), { fov: 62, blend: 2.5, drift: V(0.3, 0.5, 0.2) });
             g.music.play('hub', 4);
             audio.setAmbience('deck');
             await S.wait(3.5);
             await S.thought('Ships. Six of them, chained around a pillar of light that punches straight through the ash. And the sea… the sea is frozen solid.');
           });
           g.ui.hud.show(true);
+          g.rig.yaw = pl.yaw + Math.PI;
+          g.rig.pitch = -0.1;
           for (const id of inside) {
             const n = w.npc(id)!;
             n.lookAtPlayer = true;

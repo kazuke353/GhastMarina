@@ -545,6 +545,9 @@ export class Director {
           w2.player.control = true;
           w2.player.anim.p.pose = null;
           w2.player.anim.p.poseW = 0;
+          // hand control back with the follow camera settled behind Noah
+          g.rig.yaw = w2.player.yaw + Math.PI;
+          g.rig.pitch = -0.12;
         }
       }
     }

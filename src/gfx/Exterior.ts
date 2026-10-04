@@ -25,7 +25,7 @@ void main(){
   // beam glow & hole
   vec3 bd = normalize(uBeamDir);
   float az = max(0.0, dot(normalize(vec3(d.x, 0.0, d.z) + 1e-5), normalize(vec3(bd.x, 0.0, bd.z) + 1e-5)));
-  float bg = pow(az, 18.0) * smoothstep(-0.1, 0.5, y) * uBeamOn;
+  float bg = pow(az, 48.0) * smoothstep(-0.1, 0.5, y) * uBeamOn;
   float hole = smoothstep(0.75, 0.98, y) * uBeamOn;
   vec3 cloudCol = mix(uHorizon * 1.6, uGlow * 0.6, bg) + uGlow * uFlash * 1.5;
   col = mix(col, cloudCol, clouds * (1.0 - hole * 0.7));
@@ -343,7 +343,7 @@ export class Exterior {
       this.beamMats.forEach((m, i) => {
         m.uniforms.uTime.value = time;
         m.uniforms.uOn.value = this.beamOn;
-        m.uniforms.uPower.value = this.beamBase[i] * (i === 0 ? 0.6 + 0.4 * k : 0.12 + 0.88 * k);
+        m.uniforms.uPower.value = this.beamBase[i] * (i === 0 ? 0.22 + 0.78 * k : 0.08 + 0.92 * k);
       });
       if (this.flare) (this.flare.material as THREE.SpriteMaterial).opacity = 0.35 + 0.65 * k;
     } else if (this.bolts) this.bolts.geometry.setDrawRange(0, 0);

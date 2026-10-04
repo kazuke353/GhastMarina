@@ -37,6 +37,8 @@ export interface Theme {
   fog: [number, number];
   bg: number;
   hemi: [number, number, number];
+  /** explicit ambient intensity (otherwise derived from hemi) */
+  ambient?: number;
   dir?: [number, number, [number, number, number]]; // color, intensity, direction
   grade: Grade;
   weather: WeatherKind;
@@ -97,7 +99,7 @@ export function getTheme(id: ThemeId): Theme {
       break;
     case 'industrial':
       t = {
-        id, name: 'Industrial Complex Vessel', open: false, wallH: 7,
+        id, name: 'Industrial Complex Vessel', open: false, wallH: 7, ambient: 4.6,
         floors: { '.': F('plate', 0x9a8a7a, 'metal'), ',': F('grate', 0xffffff, 'metal'), ';': F('concrete', 0x8a8070, 'concrete'), '_': F('hazard', 0xffffff, 'metal'), '~': water },
         wall: W('rust', 0xb09a88), wallAlt: W('metal', 0x8a7a6a), wallTop: W('rust', 0x6a5a4a), wallUV: 1 / 2,
         ceiling: toon({ map: 'grate', color: 0x6a6a6a }), ceilingOn: ['.', ',', ';', '_', '~'],
@@ -111,7 +113,7 @@ export function getTheme(id: ThemeId): Theme {
       break;
     case 'lab':
       t = {
-        id, name: 'Subterranean Lab Vessel', open: false, wallH: 4.5,
+        id, name: 'Subterranean Lab Vessel', open: false, wallH: 4.5, ambient: 2.3,
         floors: { '.': F('tile', 0xffffff, 'tile'), ',': F('labPanel', 0xb8c4cc, 'tile'), ';': F('grate', 0xd0d8e0, 'metal'), '_': F('tile', 0xc0e0d8, 'tile'), '~': water },
         wall: W('labPanel', 0xe8eef4), wallAlt: W('panel', 0xd0d8e0, { emissiveMap: 'panelGlow', emissiveIntensity: 2.0 }), wallTop: W('labPanel', 0xc0c8d0), wallUV: 1,
         ceiling: toon({ map: 'labPanel', color: 0xa0a8b0 }), ceilingOn: ['.', ',', ';', '_', '~'],
@@ -153,7 +155,7 @@ export function getTheme(id: ThemeId): Theme {
       break;
     case 'cryo':
       t = {
-        id, name: 'Cryo-Preservation Vessel', open: false, wallH: 6,
+        id, name: 'Cryo-Preservation Vessel', open: false, wallH: 6, ambient: 2.4,
         floors: { '.': F('frost', 0xe0ecf8, 'ice'), ',': F('snow', 0xffffff, 'ice'), ';': F('grate', 0xb8c8d8, 'metal'), '_': F('ice', 0xffffff, 'ice'), '~': water },
         wall: W('frost', 0xd8e8f8), wallAlt: W('panel', 0xa8c0d8, { emissiveMap: 'panelGlow', emissiveIntensity: 2.2 }), wallTop: W('snow', 0xffffff), wallUV: 1 / 2,
         ceiling: toon({ map: 'frost', color: 0x9aacbc }), ceilingOn: ['.', ',', ';', '_', '~'],
