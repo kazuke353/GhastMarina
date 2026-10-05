@@ -1,0 +1,25 @@
+{
+  "name": "ghastmarina",
+  "private": true,
+  "version": "1.0.0",
+  "description": "GhastMarina: Voyage of the Betrayed — a 3D survival-horror mystery game for the browser",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:single": "vite build --mode single",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "drive": "node scripts/drive.mjs",
+    "build:artifact": "vite build --mode single && node scripts/artifact.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
